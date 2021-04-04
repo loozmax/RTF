@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+.header {
+    height:34px;
+    background:white;
+    border:5px solid black;
+    border-radius:10px;
+    position:relative;
+    z-index:2;
+}
+
+.component {
+    font-family: 'Montserrat', sans-serif;
+    margin-top:-10px;
+    border:5px solid black;
+    border-radius:0 0 10px 10px;
+    height:100vh;
+    background-size:cover;
+    scroll-snap-align: start;
+    text-align:center;
+}
+
+.navbar {
+    display:grid;
+    grid-template-columns: 5fr 2fr 1fr auto;
+}
+
+.navbar div:last-child {
+    padding:0px 110px 0 110px;
+}
+
+.navbar div {
+    border:2px solid black;
+    height:127px;
+    position: relative;
+}
+
+.navbar div:last-child p {
+    text-transform: uppercase;
+    font-size:40px;
+    text-align:center;
+}
+
+.navbar div:first-child img {
+    position:absolute;
+    left:45px;
+    top:45px;
+}
+
+.navbar div:nth-child(2) img {
+    padding-top:25px;
+}
+
+.navbar div:nth-child(3) img {
+    padding-top:45px;
+}
+
+
+/* =============== */
+
+
+.container {
+    display:flex;
+    justify-content: space-around;
+}
+
+.container div {
+    margin-top:40px;
+    width:350px;
+    height:520px;
+    border:3px solid black;
+    text-align:left;
+    position:relative;
+    padding:10px;
+}
+
+.container div::before {
+    content:'';
+    position:absolute;
+    width:30px;
+    height:30px;
+    background:url('../../assets/img/arrowToRotateCard.svg') no-repeat;
+    bottom:10px;
+    right: 10px;
+}
