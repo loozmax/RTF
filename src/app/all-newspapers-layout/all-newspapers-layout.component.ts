@@ -15,7 +15,7 @@ export class AllNewspapersLayoutComponent implements OnInit {
   public data: any[] = [
     {
       "id": 1,
-      "name": "AAA",
+      "name": "Газета 1",
       "date": "2021-02-11",
       "articles": [
         {
@@ -41,7 +41,7 @@ export class AllNewspapersLayoutComponent implements OnInit {
     },
     {
       "id":2,
-      "name": "AAA",
+      "name": "Газета 2",
       "date": "2021-02-11",
       "articles": [
         {

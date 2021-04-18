@@ -8,14 +8,19 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DayRadioComponent implements OnInit {
 
   @Input()
-  public name: string | undefined;
+  public nameString: string = "";
+
+  public nameFirst: string = '';
+  public nameSecond: string = '';
 
   @Input()
-  public date: string | undefined;
+  public date: string = "";
 
   constructor() { }
 
   ngOnInit(): void {
+    this.nameFirst = this.nameString.split(' ')[0];
+    this.nameSecond = this.nameString.split(' ')[1];
   }
 
 }

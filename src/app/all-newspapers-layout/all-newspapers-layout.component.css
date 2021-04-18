@@ -1,13 +1,23 @@
 .wrapper {
     display:flex;
+    background:#0C68B0;
+    height:100vh;
     justify-content: space-around;
-    margin-top:50px;
 }
 
 .wrapper > div {
+    padding-top:80px;
+    box-sizing:border-box;
+    margin-top:100px;
     width:400px;
     height:200px;
     text-align: center;
     border:2px solid #000;
-    background: blueviolet;
+    background: rgb(37, 16, 56);
+}
+
+.wrapper > div a {
+    text-decoration: none;
+    color:#fff;
+    font-size:25px;
 }

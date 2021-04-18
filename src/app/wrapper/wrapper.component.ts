@@ -35,14 +35,36 @@ export class WrapperComponent implements OnInit {
             },
             {
               "number": 1,
-              "maket": "COLUMNS_PAGE",
+              "maket": "OGLAVLENIE_PAGE",
+              "text": "ochen mnogo texta"
+            },
+            {
+              "number": 1,
+              "maket": "THIRD_PAGE",
               "text": "ochen mnogo texta"
             }
           ]
         },
         {
           "name": "salut",
-          "pages": []
+          "pages": [
+            {
+              "number": 1,
+              "maket": "FIFTH_PAGE",
+              "text": "ochen mnogo texta"
+            },
+            ,
+            {
+              "number": 1,
+              "maket": "TEN_PAGE",
+              "text": "ochen mnogo texta"
+            },
+            {
+              "number": 2,
+              "maket": "SEVEN_PAGE",
+              "text": "ochen mnogo texta"
+            }
+          ]
         }
       ]
     },
@@ -61,14 +83,30 @@ export class WrapperComponent implements OnInit {
             },
             {
               "number": 1,
-              "maket": "COLUMNS_PAGE",
+              "maket": "THIRD_PAGE",
+              "text": "ochen mnogo texta"
+            },
+            {
+              "number": 1,
+              "maket": "SEVEN_PAGE",
+              "text": "ochen mnogo texta"
+            },
+            {
+              "number": 1,
+              "maket": "TEN_PAGE",
               "text": "ochen mnogo texta"
             }
           ]
         },
         {
           "name": "salut",
-          "pages": []
+          "pages": [
+            {
+              "number": 1,
+              "maket": "FIFTH_PAGE",
+              "text": "ochen mnogo texta"
+            }
+          ]
         }
       ]
     }

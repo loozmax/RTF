@@ -1,18 +1,22 @@
 <div class='container'>
-
     <div>
-        <div *ngFor='let item of data, let i = index'>
-            <div *ngIf="id == i+1">
-                <app-day-radio [name]="item.name" [date]="item.date"></app-day-radio>
-                <app-oglavlenie></app-oglavlenie>
-                <app-slider3></app-slider3>
-                <app-slider4></app-slider4>
-                <app-slider5></app-slider5>
-                <app-slider7></app-slider7>
-                <app-slider8></app-slider8>
-                <app-slider9></app-slider9>
-                <app-slider6></app-slider6>
-                <app-slider10></app-slider10>
+        <div *ngFor='let item of data'>
+            <div *ngIf="id == item.id">
+                <div *ngFor="let article of item.articles">
+                    <div *ngFor="let page of article.pages">
+                        <app-day-radio *ngIf="page.maket == 'FIRST_PAGE'" [nameString]="item.name" [date]="item.date">
+                        </app-day-radio>
+                        <app-oglavlenie *ngIf="page.maket == 'OGLAVLENIE_PAGE'"></app-oglavlenie>
+                        <app-slider3 *ngIf="page.maket == 'THIRD_PAGE'"></app-slider3>
+                        <app-slider4 *ngIf="page.maket == 'FOURTH_PAGE'"></app-slider4>
+                        <app-slider5 *ngIf="page.maket == 'FIFTH_PAGE'"></app-slider5>
+                        <app-slider7 *ngIf="page.maket == 'SEVEN_PAGE'"></app-slider7>
+                        <app-slider8 *ngIf="page.maket == 'EIGHT_PAGE'"></app-slider8>
+                        <app-slider9 *ngIf="page.maket == 'NINE_PAGE'"></app-slider9>
+                        <app-slider6 *ngIf="page.maket == 'SIX_PAGE'"></app-slider6>
+                        <app-slider10 *ngIf="page.maket == 'TEN_PAGE'"></app-slider10>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
