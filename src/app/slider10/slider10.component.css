@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 
 .component {
     font-family: 'Montserrat', sans-serif;
@@ -46,49 +47,34 @@
     padding-top:35px;
 }
 
-.content {
+/*=============*/
+
+.content__numbers {
+    background: #0C68B0;
+    height:110px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content__numbers p {
+    color: #fff;
+    font-size:40px;
+    margin:0;
+    text-transform: uppercase;
+}
+
+.content__table {
     display:grid;
-    grid-template-columns: 7fr auto;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-
-.container {
-    display:grid;
-    grid-template-columns: 1fr 1.15fr;
-    
+.content__table div {
+    border:1px solid #000;
 }
 
-/* .oglav, .dayradio {
-    border:1px solid black;
-} */
-
-.dayradio {
-    position:relative;
-}
-
-h1 {
-    font-weight:bold;
-    font-size:53px;
+.content__table div p {
+    font-size:30.5px;
     text-align:left;
-    padding-left:63px;
-    padding-right:37px;
+    padding:0 30px 0 30px;
 }
-
-.dayradio p {
-    padding-left:63px;
-    font-size:20px;
-    padding-right:37px;
-    text-align:left;
-    margin-top:-20px;
-    margin-bottom:125px;
-}
-/* 
-.author {
-    position:relative;
-    width:241px;
-    height:123px;
-    border:5px solid #000;
-    right:0;
-    bottom:0;
-    font-size:20px;
-} */

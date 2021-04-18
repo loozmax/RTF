@@ -1,0 +1,13 @@
+.wrapper {
+    display:flex;
+    justify-content: space-around;
+    margin-top:50px;
+}
+
+.wrapper > div {
+    width:400px;
+    height:200px;
+    text-align: center;
+    border:2px solid #000;
+    background: blueviolet;
+}

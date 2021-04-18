@@ -1,0 +1,19 @@
+<div class='container'>
+
+    <div>
+        <div *ngFor='let item of data, let i = index'>
+            <div *ngIf="id == i+1">
+                <app-day-radio [name]="item.name" [date]="item.date"></app-day-radio>
+                <app-oglavlenie></app-oglavlenie>
+                <app-slider3></app-slider3>
+                <app-slider4></app-slider4>
+                <app-slider5></app-slider5>
+                <app-slider7></app-slider7>
+                <app-slider8></app-slider8>
+                <app-slider9></app-slider9>
+                <app-slider6></app-slider6>
+                <app-slider10></app-slider10>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<div class='wrapper' >
+    <div *ngFor="let item of data">
+        <a [routerLink]="['newspaper', item.id]">{{item.name}}</a>
+    </div>
+</div>

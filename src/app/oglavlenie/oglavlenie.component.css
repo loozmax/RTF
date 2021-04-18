@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-
-.header {
-    height:34px;
-    background:white;
-    border:5px solid black;
-    border-radius:10px;
-    position:relative;
-    z-index:2;
-}
-
 .component {
     font-family: 'Montserrat', sans-serif;
     margin-top:-10px;
@@ -27,33 +17,33 @@
 }
 
 .navbar div:last-child {
-    padding:0px 110px 0 110px;
+    padding:0px 40px 0 40px;
 }
 
 .navbar div {
     border:2px solid black;
-    height:127px;
+    height:100px;
     position: relative;
 }
 
 .navbar div:last-child p {
     text-transform: uppercase;
-    font-size:40px;
+    font-size:34px;
     text-align:center;
 }
 
 .navbar div:first-child img {
     position:absolute;
     left:45px;
-    top:45px;
+    top:34px;
 }
 
 .navbar div:nth-child(2) img {
-    padding-top:25px;
+    padding-top:15px;
 }
 
 .navbar div:nth-child(3) img {
-    padding-top:45px;
+    padding-top:35px;
 }
 
 .content {
@@ -62,7 +52,7 @@
 }
 
 .content > div:first-child {
-    border:3px solid black;
+    /* border:3px solid black; */
     border-bottom:0;
 }
 

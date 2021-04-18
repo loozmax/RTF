@@ -10,6 +10,8 @@ export class Slider5Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
+  
 }

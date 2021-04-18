@@ -1,14 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-
-.header {
-    height:34px;
-    background:white;
-    border:5px solid black;
-    border-radius:10px;
-    position:relative;
-    z-index:2;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 .component {
     font-family: 'Montserrat', sans-serif;
@@ -27,33 +17,33 @@
 }
 
 .navbar div:last-child {
-    padding:0px 110px 0 110px;
+    padding:0px 40px 0 40px;
 }
 
 .navbar div {
     border:2px solid black;
-    height:127px;
+    height:100px;
     position: relative;
 }
 
 .navbar div:last-child p {
     text-transform: uppercase;
-    font-size:40px;
+    font-size:34px;
     text-align:center;
 }
 
 .navbar div:first-child img {
     position:absolute;
     left:45px;
-    top:45px;
+    top:34px;
 }
 
 .navbar div:nth-child(2) img {
-    padding-top:25px;
+    padding-top:15px;
 }
 
 .navbar div:nth-child(3) img {
-    padding-top:45px;
+    padding-top:35px;
 }
 
 
@@ -61,18 +51,51 @@
 
 .container {
     display:grid;
-    grid-template-columns: 1fr 1.15fr;
+    grid-template-columns: 1.1fr 1fr;
 }
 
-.container > div {
-    border:3px solid black;
+
+.oglav h1 {
+    font-size:55px;
+    text-align:left;
+    text-transform: uppercase;
+    margin-top:15px;
 }
 
-h1 {
-    font-size:71px;
+.oglav > p {
+    display:block;
+    margin-top:-10px;
+    padding-right:35px;
+    font-size:20px;
+    text-align: left;
 }
 
-h1 + p {
-    font-size:25px;
-    margin-bottom:162px;
+.oglav div p {
+    
+    text-transform: uppercase;
+    font-size:40px;
+}
+
+.oglav div {
+    margin-top:150px;
+    width:200px;
+    position:relative;
+    margin:150px auto;
+}
+
+.oglav div p::before {
+    content:'';
+    position:absolute;
+    width:30px;
+    height:30px;
+    background:url('../../assets/img/arrowToRotateCard.svg') no-repeat;
+    top:50px;
+    right: 80px;
+    transform:rotate(43deg);
+    cursor: pointer;
+}
+
+a {
+    color:#0C68B0;
+    text-decoration: none;
 }
