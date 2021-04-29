@@ -2,8 +2,6 @@
 
 .component {
     font-family: 'Montserrat', sans-serif;
-    margin-top:-10px;
-    border:5px solid black;
     border-radius:0 0 10px 10px;
     height:100vh;
     background-size:cover;
@@ -13,7 +11,7 @@
 
 .navbar {
     display:grid;
-    grid-template-columns: 5fr 2fr 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr 7fr;
 }
 
 .navbar div:last-child {

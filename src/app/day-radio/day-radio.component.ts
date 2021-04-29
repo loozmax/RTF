@@ -20,7 +20,7 @@ export class DayRadioComponent implements OnInit {
 
   ngOnInit(): void {
     this.nameFirst = this.nameString.split(' ')[0];
-    this.nameSecond = this.nameString.split(' ')[1];
+    this.nameSecond = this.nameString.split(' ')[2];
   }
 
 }

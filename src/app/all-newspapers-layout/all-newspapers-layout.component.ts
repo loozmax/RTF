@@ -7,65 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllNewspapersLayoutComponent implements OnInit {
 
+  public datas: any[] = [];
+  
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    this.fetchDataFromServer();
   }
 
-  public data: any[] = [
-    {
-      "id": 1,
-      "name": "Газета 1",
-      "date": "2021-02-11",
-      "articles": [
-        {
-          "name": "jjj",
-          "pages": [
-            {
-              "number": 1,
-              "maket": "FIRST_PAGE",
-              "text": "mnogo texta"
-            },
-            {
-              "number": 1,
-              "maket": "COLUMNS_PAGE",
-              "text": "ochen mnogo texta"
-            }
-          ]
-        },
-        {
-          "name": "salut",
-          "pages": []
-        }
-      ]
-    },
-    {
-      "id":2,
-      "name": "Газета 2",
-      "date": "2021-02-11",
-      "articles": [
-        {
-          "name": "jjj",
-          "pages": [
-            {
-              "number": 1,
-              "maket": "FIRST_PAGE",
-              "text": "mnogo texta"
-            },
-            {
-              "number": 1,
-              "maket": "COLUMNS_PAGE",
-              "text": "ochen mnogo texta"
-            }
-          ]
-        },
-        {
-          "name": "salut",
-          "pages": []
-        }
-      ]
-    }
-  ]
+  public fetchDataFromServer(): void {
+    let url = 'http://80.87.111.224:80/rtf/magazine';
 
-
+    fetch(url, { mode: 'cors' })
+      .then(res => res.json())
+      .then((data: any) => {
+        this.datas = data;
+        console.log(this.datas);
+      })
+      .catch(err => { throw err });
+  }
 }
+
+

@@ -6,9 +6,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./slider10.component.css']
 })
 export class Slider10Component implements OnInit {
+  @Input()
+  public textFirst: string = "";
 
   @Input()
-  public nameString: string = "";
+  public textSecond: string = "";
+
+  @Input()
+  public textThird: string = "";
   
   constructor() { }
 

@@ -1,20 +1,28 @@
 <div class='container'>
     <div>
-        <div *ngFor='let item of data'>
+        <div *ngFor='let item of datas'>
             <div *ngIf="id == item.id">
+                <div *ngFor="let main of item.main">
+                    <app-day-radio *ngIf="main.maket == 'FIRST_PAGE'" [nameString]="item.name" [date]="item.date">
+                    </app-day-radio>
+                </div>
+                <div *ngFor="let chapter of item.chapterList">
+                    <app-oglavlenie [nameString]="chapter.text" *ngIf="chapter.maket == 'CHAPTER_LIST'"></app-oglavlenie>
+                </div>
                 <div *ngFor="let article of item.articles">
                     <div *ngFor="let page of article.pages">
-                        <app-day-radio *ngIf="page.maket == 'FIRST_PAGE'" [nameString]="item.name" [date]="item.date">
-                        </app-day-radio>
-                        <app-oglavlenie [nameString]="page.text" *ngIf="page.maket == 'OGLAVLENIE_PAGE'"></app-oglavlenie>
-                        <app-slider3 [nameString]="page.text" *ngIf="page.maket == 'THIRD_PAGE'"></app-slider3>
-                        <app-slider4 [nameString]="page.text" *ngIf="page.maket == 'FOURTH_PAGE'"></app-slider4>
-                        <app-slider5 [nameString]="page.text" *ngIf="page.maket == 'FIFTH_PAGE'"></app-slider5>
-                        <app-slider7 [nameString]="page.text" *ngIf="page.maket == 'SEVEN_PAGE'"></app-slider7>
-                        <app-slider8 [nameString]="page.text" *ngIf="page.maket == 'EIGHT_PAGE'"></app-slider8>
-                        <app-slider9 [nameString]="page.text" *ngIf="page.maket == 'NINE_PAGE'"></app-slider9>
-                        <app-slider6 [nameString]="page.text" *ngIf="page.maket == 'SIX_PAGE'"></app-slider6>
-                        <app-slider10 [nameString]="page.text" *ngIf="page.maket == 'TEN_PAGE'"></app-slider10>
+                        <app-slider3 [nameString]="page.text" *ngIf="page.maket == 'ONE_PICTURE'"></app-slider3>
+                        <app-slider4 [nameString]="page.text" *ngIf="page.maket == 'INTRODUCTION'"></app-slider4>
+                        <app-slider5 [textFirst]="page.text[0]" [textSecond]="page.text[1]" 
+                        [textThird]="page.text[2]" *ngIf="page.maket == 'COLUMNS_PAGE'"
+                        ></app-slider5>
+                        <app-slider7 [nameString]="page.text" *ngIf="page.maket == 'CARD_PAGE'"></app-slider7>
+                        <!-- <app-slider8 [nameString]="page.text" ></app-slider8> -->
+                        <!-- <app-slider9 [nameString]="page.text" ></app-slider9> -->
+                        <!-- <app-slider6 [nameString]="page.text" ></app-slider6> -->
+                        <app-slider10 [textFirst]="page.text[0]" [textSecond]="page.text[1]" 
+                        [textThird]="page.text[2]"
+                        *ngIf="page.maket == 'MANY_TEXTS'"></app-slider10>
                     </div>
                 </div>
             </div>

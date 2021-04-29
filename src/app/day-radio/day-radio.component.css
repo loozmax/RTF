@@ -3,7 +3,6 @@
 .component {
     font-family: 'Montserrat', sans-serif;
     background:#0C68B0;
-    border:5px solid black;
     border-radius:0 0 10px 10px;
     height:100vh;
     background-size:cover;
@@ -36,18 +35,24 @@
 } 
 
 .footer-p {
-    margin-top:130px;
-    width:53.5%;
-    display:flex;
-    text-indent: 100px;
-    justify-content: space-between
+    margin:130px auto;
 } 
 
 .footer-p p {
     text-transform: uppercase;
     font-size:20px;
     font-weight:400;
-    opacity:0.5;
+    opacity:0.5;    
+    display:inline-block;
+}
+
+.footer-p p:first-child {
+    float:left;
+    margin-left:100px;
+}
+
+.footer-p p:last-child {
+    margin-right:210px;
 }
 
 

@@ -6,110 +6,29 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './wrapper.component.html',
   styleUrls: ['./wrapper.component.css']
 })
-export class WrapperComponent implements OnInit {
+export class WrapperComponent {
 
-  ngOnInit() {
-
-  }
-
+  public datas: any[] = [];
   public id: any = 0;
 
   constructor(private route: ActivatedRoute) {
     this.route.params.forEach(item => this.id = item.id);
-    console.log(this.id);
   }
 
-  public data: any[] = [
-    {
-      "id": 1,
-      "name": "ДЕНЬ КОЛБАСЫ",
-      "date": "2021-02-11",
-      "articles": [
-        {
-          "name": "jjj",
-          "pages": [
-            {
-              "number": 1,
-              "maket": "FIRST_PAGE",
-              "text": "mnogo texta"
-            },
-            {
-              "number": 1,
-              "maket": "OGLAVLENIE_PAGE",
-              "text": "ochen mnogo texta"
-            },
-            {
-              "number": 1,
-              "maket": "THIRD_PAGE",
-              "text": "ochen mnogo texta"
-            }
-          ]
-        },
-        {
-          "name": "salut",
-          "pages": [
-            {
-              "number": 1,
-              "maket": "FIFTH_PAGE",
-              "text": "ochen mnogo texta"
-            },
-            ,
-            {
-              "number": 1,
-              "maket": "TEN_PAGE",
-              "text": "ochen mnogo texta"
-            },
-            {
-              "number": 2,
-              "maket": "SEVEN_PAGE",
-              "text": "ochen mnogo texta"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "ДЕНЬ ДНЯ",
-      "date": "2021-02-11",
-      "articles": [
-        {
-          "name": "jjj",
-          "pages": [
-            {
-              "number": 1,
-              "maket": "FIRST_PAGE",
-              "text": "mnogo texta"
-            },
-            {
-              "number": 1,
-              "maket": "THIRD_PAGE",
-              "text": "ochen mnogo texta"
-            },
-            {
-              "number": 1,
-              "maket": "SEVEN_PAGE",
-              "text": "ochen mnogo texta"
-            },
-            {
-              "number": 1,
-              "maket": "TEN_PAGE",
-              "text": "ochen mnogo texta"
-            }
-          ]
-        },
-        {
-          "name": "salut",
-          "pages": [
-            {
-              "number": 1,
-              "maket": "FIFTH_PAGE",
-              "text": "ochen mnogo texta"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  public ngOnInit(): void {
+    this.fetchDataFromServer();
+  }
+
+  public fetchDataFromServer(): void {
+    let url = `http://80.87.111.224:80/rtf/magazine/${this.id}`;
+
+    fetch(url, { mode: 'cors' })
+      .then(res => res.json())
+      .then((data: any) => {
+        this.datas = data;
+        console.log(this.datas);
+      })
+      .catch(err => { throw err });
+  }
 
 }

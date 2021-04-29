@@ -8,7 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class Slider5Component implements OnInit {
 
   @Input()
-  public nameString: string = "";
+  public textFirst: string = "";
+
+  @Input()
+  public textSecond: string = "";
+
+  @Input()
+  public textThird: string = "";
   
   constructor() { }
 
