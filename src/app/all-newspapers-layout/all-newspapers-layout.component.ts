@@ -16,7 +16,7 @@ export class AllNewspapersLayoutComponent implements OnInit {
   }
 
   public fetchDataFromServer(): void {
-    let url = 'http://80.87.111.224:80/rtf/magazine';
+    let url = 'https://rtfnews.site/rtf/magazine';
 
     fetch(url, { mode: 'cors' })
       .then(res => res.json())

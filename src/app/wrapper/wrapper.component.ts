@@ -20,7 +20,7 @@ export class WrapperComponent {
   }
 
   public fetchDataFromServer(): void {
-    let url = `http://80.87.111.224:80/rtf/magazine/${this.id}`;
+    let url = `https://rtfnews.site/rtf/magazine/${this.id}`;
 
     fetch(url, { mode: 'cors' })
       .then(res => res.json())
