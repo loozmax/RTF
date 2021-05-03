@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-all-newspapers-layout',
@@ -8,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class AllNewspapersLayoutComponent implements OnInit {
 
   public datas: any[] = [];
-  
-  constructor() { }
+  public byteImage: any;
+
+  constructor(private domSanitizer: DomSanitizer) { }
 
   public ngOnInit(): void {
     this.fetchDataFromServer();
@@ -22,10 +24,13 @@ export class AllNewspapersLayoutComponent implements OnInit {
       .then(res => res.json())
       .then((data: any) => {
         this.datas = data;
-        console.log(this.datas);
+        console.log(data);
       })
       .catch(err => { throw err });
   }
+
+
+
+
+
 }
-
-

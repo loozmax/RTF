@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NewspaperModel } from '../newspaper.model/newspaper.model.component';
 
 @Component({
   selector: 'app-day-radio',
@@ -7,18 +8,25 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DayRadioComponent implements OnInit {
 
+
   @Input()
   public nameString: string = "";
-
-  public nameFirst: string = '';
-  public nameSecond: string = '';
 
   @Input()
   public date: string = "";
 
+  public nameFirst: string = '';
+  public nameSecond: string = '';
+
+  public model: NewspaperModel = new NewspaperModel();
+
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    this.splitTitle();
+  }
+
+  public splitTitle(): void {
     this.nameFirst = this.nameString.split(' ')[0];
     this.nameSecond = this.nameString.split(' ')[2];
   }

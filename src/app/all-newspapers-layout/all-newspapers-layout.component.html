@@ -3,5 +3,6 @@
     <div *ngFor="let item of datas">
         <a [routerLink]="['newspaper', item.id]">{{item.name}}</a>
         <p>{{item.date}}</p>
+        <img [src]="byteimage" />
     </div>
 </div>
