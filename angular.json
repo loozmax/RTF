@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rtf-news": {
+    "RTF": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/rtf-news",
+            "outputPath": "dist/RTF",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "rtf-news:build"
+            "browserTarget": "RTF:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "rtf-news:build:production"
+              "browserTarget": "RTF:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rtf-news:build"
+            "browserTarget": "RTF:build"
           }
         },
         "test": {
@@ -113,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "rtf-news:serve"
+            "devServerTarget": "RTF:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "rtf-news:serve:production"
+              "devServerTarget": "RTF:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "rtf-news"
+  "defaultProject": "RTF"
 }
