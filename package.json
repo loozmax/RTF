@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~11.2.7",
     "@angular/platform-browser-dynamic": "~11.2.7",
     "@angular/router": "~11.2.7",
+    "angular-cli-ghpages": "^1.0.0-rc.1",
     "png-js": "^1.0.0",
     "pngjs": "^6.0.0",
     "rxjs": "~6.6.0",
