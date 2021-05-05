@@ -53,7 +53,7 @@ export class Slider5Component implements OnInit {
   }
 
   public get byteimage3() {
-    return this.domSanitizer.bypassSecurityTrustUrl(`data:image/png;base64,${this.byteImage[3]}`);
+    return this.domSanitizer.bypassSecurityTrustUrl(`data:image/png;base64,${this.byteImage[2]}`);
   }
 
 
