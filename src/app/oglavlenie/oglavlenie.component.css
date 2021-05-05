@@ -54,7 +54,7 @@
     border-bottom:0;
 }
 
-.oglav {
+.articles-number {
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap:2em;
@@ -62,18 +62,18 @@
 
 .oglav div:nth-child(2n + 1) {
     width:364px;
-    margin-bottom:36px;
-    font-size:38px;
+    margin-bottom:15px;
+    font-size:30px;
     text-align:left;
 }
 
 .oglav div:nth-child(2n) {
-    font-size:38px;
+    font-size:30px;
 }
 
 .oglav {
     box-sizing: border-box;
-    padding:80px 60px 60px;
+    padding:45px 60px 60px;
 }
 
 .dayradio {

@@ -26,7 +26,6 @@ export class WrapperComponent {
       .then(res => res.json())
       .then((data: any) => {
         this.datas = data;
-        console.log(data);
       })
       .catch(err => { throw err });
   }
