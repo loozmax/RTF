@@ -95,6 +95,10 @@
 
 .back {
     transform: rotateY(180deg);
+    position:relative;
+    overflow:hidden;
+    padding:0;
+    margin:0;
 }
 
 .card:hover .front {
@@ -103,4 +107,10 @@
 
 .card:hover .back {
       transform: rotateY(360deg);
+}
+
+.back img {
+    border-radius:10px;
+    width:600px;
+    height:350px;
 }

@@ -9,6 +9,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class Slider7Component implements OnInit {
 
   @Input()
+  public title: string = "";
+  
+  @Input()
   public nameString: string = "";
   
   @Input()
@@ -29,7 +32,6 @@ export class Slider7Component implements OnInit {
       .then(res => res.text())
       .then((data: any) => {
         this.byteImage =  data;
-        console.log(data);
       })
       .catch(err => { throw err });
   }

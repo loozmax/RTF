@@ -57,6 +57,7 @@
 /* ------------------- */
 
 .container {
+    position: relative;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -65,7 +66,23 @@
 
 .container p {
     width:712px;
-    height:203px;
     font-size:28px;
-    margin: 0;
+}
+
+.img1, .img2 {
+    position:absolute;
+}
+
+.img1 {
+    top:0;
+    left:0;
+    width:340px;
+    height:210px;
+}
+
+.img2 {
+    bottom:0;
+    right:0;
+    width:340px;
+    height:210px;
 }

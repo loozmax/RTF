@@ -85,6 +85,12 @@
     transform: rotateY(180deg);
 }
 
+.card__back img {
+    width: 350px;
+    height: 450px;
+    border-radius:10px;
+}
+
 .card:hover .card__front {
     transform: rotateY(180deg);
 }

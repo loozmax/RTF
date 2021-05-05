@@ -9,6 +9,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class Slider5Component implements OnInit {
 
   @Input()
+  public title: string = "";
+
+  @Input()
   public textFirst: string = "";
 
   @Input()
@@ -18,9 +21,9 @@ export class Slider5Component implements OnInit {
   public textThird: string = "";
 
   @Input()
-  public image: any;
+  public image: any[] = [];
 
-  public byteImage: any;
+  public byteImage: any[] = [];
 
   constructor(private domSanitizer: DomSanitizer) { }
 
@@ -29,19 +32,28 @@ export class Slider5Component implements OnInit {
   }
 
   public fetchtest(): void {
-    let url = `https://rtfnews.site/rtf/images?filename=${this.image}`;
+    this.image.forEach((item, index) => {
+      let url = `https://rtfnews.site/rtf/images?filename=${this.image[index]}`;
 
-    fetch(url, { mode: 'cors' })
-      .then(res => res.text())
-      .then((data: any) => {
-        this.byteImage = data;
-        console.log(data);
-      })
-      .catch(err => { throw err });
+      fetch(url, { mode: 'cors' })
+        .then(res => res.text())
+        .then((data: any) => {
+          this.byteImage[index] = data;
+        })
+        .catch(err => { throw err });
+    })
   }
 
-  public get byteimage() {
-    return this.domSanitizer.bypassSecurityTrustUrl(`data:image/png;base64,${this.byteImage}`);
+  public get byteimage1() {
+    return this.domSanitizer.bypassSecurityTrustUrl(`data:image/png;base64,${this.byteImage[0]}`);
+  }
+
+  public get byteimage2() {
+    return this.domSanitizer.bypassSecurityTrustUrl(`data:image/png;base64,${this.byteImage[1]}`);
+  }
+
+  public get byteimage3() {
+    return this.domSanitizer.bypassSecurityTrustUrl(`data:image/png;base64,${this.byteImage[3]}`);
   }
 
 

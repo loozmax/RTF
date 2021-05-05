@@ -3,13 +3,13 @@
         <div><img src='https://raw.githubusercontent.com/loozmax/RTF-NEWS/5cc984bbc4b4595fd9e12859d3710306c89f68fd/src/assets/img/burger.svg'></div>
         <div><img src='https://sun9-39.userapi.com/impf/u4Ue_qet2PGtWkpW-fhNTquOW8Iz28zou165Nw/XFoU1xYYDPM.jpg?size=81x77&quality=96&sign=1f07460f9ab90bd1d24dac353de966ed&type=album'></div>
         <div><img src='https://raw.githubusercontent.com/loozmax/RTF-NEWS/5cc984bbc4b4595fd9e12859d3710306c89f68fd/src/assets/img/search.svg'></div>
-        <div><p>когда отгремят салюты</p></div>
+        <div><p>{{title}}</p></div>
     </div>
     <div class='content'>
         <div class='card__container'>
             <div class='card'>
                 <div class='content__container front'>
-                    <p>{{nameString}}</p>
+                    <p [innerHtml]="nameString"></p>
                 </div>
                 <div class='content__container back'>
                     <img [src]="byteimage" />
