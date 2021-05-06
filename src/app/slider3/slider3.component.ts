@@ -25,23 +25,27 @@ export class Slider3Component implements OnInit {
   constructor(private domSanitizer: DomSanitizer) { }
   
   public ngOnInit(): void {
-    this.fetchtest();
+    // this.fetchtest();
   }
 
-  public fetchtest(): void {
-    let url = `https://rtfnews.site/rtf/images?filename=${this.image}`;
+  // public fetchtest(): void {
+  //   let url = `https://rtfnews.site/rtf/images?filename=${this.image}`;
 
-    fetch(url, { mode: 'cors' })
-      .then(res => res.text())
-      .then((data: any) => {
-        this.byteImage =  data;
-      })
-      .catch(err => { throw err });
+  //   fetch(url, { mode: 'cors' })
+  //     .then(res => res.text())
+  //     .then((data: any) => {
+  //       this.byteImage =  data;
+  //     })
+  //     .catch(err => { throw err });
+  // }
+
+  public byteimage() {
+    return `https://rtfnews.site/rtf/images/${this.image}`;
   }
 
-  public get byteimage() {
-    return this.domSanitizer.bypassSecurityTrustUrl(`data:image/png;base64,${this.byteImage}`);
-  }
+  // public get byteimage() {
+  //   return this.domSanitizer.bypassSecurityTrustUrl(`data:image/png;base64,${this.byteImage}`);
+  // }
 
 
 }

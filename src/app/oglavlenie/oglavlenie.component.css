@@ -60,6 +60,10 @@
     grid-column-gap:2em;
 }
 
+.articles-number div:last-child {
+    width:200px;
+}
+
 .oglav div:nth-child(2n + 1) {
     width:364px;
     margin-bottom:15px;
@@ -74,6 +78,7 @@
 .oglav {
     box-sizing: border-box;
     padding:45px 60px 60px;
+    width:600px;
 }
 
 .dayradio {
