@@ -1,6 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+export interface IData {
+  articles: Array<any>,
+  chapterList: Array<any>,
+  date: string,
+  id: number,
+  main: Array<any>,
+  name: string
+}
+
 @Component({
   selector: 'app-oglavlenie',
   templateUrl: './oglavlenie.component.html',
@@ -8,7 +17,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class OglavlenieComponent {
 
-  public datas: any[] = [];
+  public datas: IData[] = [];
   public id: any = 0;
 
   @Input()
