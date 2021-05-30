@@ -18,7 +18,7 @@
             <p>день</p>
             <p>радио</p>
         </div>
-        <div class='oglav' *ngIf="datas[0].articles">
+        <div class='oglav'>
             <div class="articles-number" *ngFor="let item of datas[0].articles">
                 <div>{{item.name}}</div>
                 <div>{{item.pages[0].number + 1}} — {{item.pages[item.pages.length - 1].number

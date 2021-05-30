@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NewspaperModel } from '../newspaper.model/newspaper.model.component';
 
 @Component({
   selector: 'app-day-radio',
@@ -17,8 +16,6 @@ export class DayRadioComponent implements OnInit {
 
   public nameFirst: string = '';
   public nameSecond: string = '';
-
-  public model: NewspaperModel = new NewspaperModel();
 
   constructor() { }
 

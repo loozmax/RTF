@@ -1,0 +1,50 @@
+<div class="admin">
+    <div class="admin__element">
+        <p class="add-new" (click)="changeActiveModal()">Добавить новый<br> выпуск</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="525" height="525" viewBox="0 0 525 525">
+            <g id="Эллипс_1" data-name="Эллипс 1" fill="none" stroke="#fff" stroke-width="10">
+                <circle cx="262.5" cy="262.5" r="262.5" stroke="none" />
+                <circle cx="262.5" cy="262.5" r="257.5" fill="none" />
+            </g>
+        </svg>
+    </div>
+    <create-new-release (closeModal)="closeModal()" *ngIf="showModal"></create-new-release>
+    <div class="admin__element">
+        <p>Настройка текущих<br> выпусков</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="535.5" height="535.5" viewBox="0 0 535.5 535.5">
+            <g id="Icon_feather-settings" data-name="Icon feather-settings" transform="translate(3.5 3.5)">
+                <path id="Контур_3" data-name="Контур 3"
+                    d="M156.818,85.159A71.659,71.659,0,1,1,85.159,13.5,71.659,71.659,0,0,1,156.818,85.159Z"
+                    transform="translate(179.091 179.091)" fill="none" stroke="#fff" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="10" />
+                <path id="Контур_4" data-name="Контур 4"
+                    d="M441.009,335.909a39.413,39.413,0,0,0,7.882,43.473l1.433,1.433a47.8,47.8,0,1,1-67.6,67.6l-1.433-1.433a39.733,39.733,0,0,0-67.36,28.186v4.061a47.773,47.773,0,1,1-95.545,0v-2.15a39.412,39.412,0,0,0-25.8-36.068,39.412,39.412,0,0,0-43.473,7.882l-1.433,1.433a47.8,47.8,0,1,1-67.6-67.6l1.433-1.433a39.733,39.733,0,0,0-28.186-67.36H49.273a47.773,47.773,0,1,1,0-95.545h2.15a39.412,39.412,0,0,0,36.068-25.8,39.413,39.413,0,0,0-7.883-43.473l-1.433-1.433a47.8,47.8,0,1,1,67.6-67.6l1.433,1.433A39.413,39.413,0,0,0,190.68,89.4h1.911a39.412,39.412,0,0,0,23.886-36.068V49.273a47.773,47.773,0,1,1,95.545,0v2.15a39.733,39.733,0,0,0,67.36,28.186l1.433-1.433a47.8,47.8,0,1,1,67.6,67.6l-1.433,1.433A39.413,39.413,0,0,0,439.1,190.68v1.911a39.412,39.412,0,0,0,36.068,23.886h4.061a47.773,47.773,0,0,1,0,95.545h-2.15a39.413,39.413,0,0,0-36.068,23.886Z"
+                    transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="10" />
+            </g>
+        </svg>
+
+    </div>
+    <div class="admin__element">
+        <p>Редактировать<br> издателей</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="566.111" height="465" viewBox="0 0 566.111 465">
+            <g id="Icon_feather-users" data-name="Icon feather-users" transform="translate(5 5)">
+                <path id="Контур_5" data-name="Контур 5"
+                    d="M1.5,174.167V123.611A101.111,101.111,0,0,1,102.611,22.5H304.833A101.111,101.111,0,0,1,405.944,123.611v50.556"
+                    transform="translate(150.167 280.833)" fill="none" stroke="#fff" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="10" />
+                <path id="Контур_6" data-name="Контур 6"
+                    d="M7.5,105.611A101.111,101.111,0,1,0,108.611,4.5,101.111,101.111,0,0,0,7.5,105.611Z"
+                    transform="translate(245.278 -4.5)" fill="none" stroke="#fff" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="10" />
+                <path id="Контур_7" data-name="Контур 7" d="M30,171.075V120.52a101.111,101.111,0,0,1,75.833-97.825"
+                    transform="translate(-30 283.924)" fill="none" stroke="#fff" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="10" />
+                <path id="Контур_8" data-name="Контур 8" d="M100.032,4.695a101.111,101.111,0,0,0,0,195.9"
+                    transform="translate(76.913 -1.409)" fill="none" stroke="#fff" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="10" />
+            </g>
+        </svg>
+
+    </div>
+</div>

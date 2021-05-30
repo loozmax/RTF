@@ -7,8 +7,7 @@
                     </app-day-radio>
                 </div>
                 <div *ngFor="let chapter of item.chapterList">
-                    <app-oglavlenie [nameString]="chapter.text" *ngIf="chapter.maket == 'CHAPTER_LIST'">
-                    </app-oglavlenie>
+                    <app-oglavlenie *ngIf="chapter.maket == 'CHAPTER_LIST'"></app-oglavlenie>
                 </div>
                 <div *ngFor="let article of item.articles">
                     <div *ngFor="let page of article.pages">

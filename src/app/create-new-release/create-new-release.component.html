@@ -1,0 +1,34 @@
+<form [formGroup]="myForm">
+
+    <p class="close" (click)="closeModalView()">X</p>
+
+    <div class="articles" *ngFor="let item of articleNumbers; let i = index">
+        <div>
+            <label>Автор: </label>
+            <input type="text" formControlName="author">
+        </div>
+        <div>
+            <label>Название: </label>
+            <input type="text" formControlName="nameArticle">
+        </div>
+        <div class="articles__item" *ngFor="pages of item.countPages">
+            <div>
+                <label>Макет: </label>
+                <input type="text" formControlName="maket">
+            </div>
+            <div>
+                <label>Текст: </label>
+                <input type="text" formControlName="textPage">
+            </div>
+            <div>
+                <label>Картинка: </label>
+                <label class="choose-picture" for="upload">выберите картинку</label>
+                <input class="hide" id="upload" type='file'>
+            </div>
+        </div>
+
+        <div class="more-articles" (click)="increasePages(i)">Нужно больше страниц</div>
+    </div>
+    <div class="more-pages" (click)="increaseArticles()">Больше статей</div>
+    <button class="create" [disabled]="myForm.invalid" (click)="sumbit(myForm)">Создать</button>
+</form>
