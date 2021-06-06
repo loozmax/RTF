@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AdminGuard } from 'src/app/admin-guard/admin.guard';
 import { AdminPanelComponent } from 'src/app/admin-panel/admin-panel.component';
@@ -26,7 +26,8 @@ import { NewsRoutingModule } from './news-routing.module';
     CommonModule,
     RouterModule,
     NewsRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class NewsModule { }

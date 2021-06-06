@@ -7,7 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DayRadioComponent implements OnInit {
 
-
   @Input()
   public nameString: string = "";
 

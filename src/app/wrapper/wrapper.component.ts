@@ -10,7 +10,7 @@ export class WrapperComponent {
 
   public datas: any[] = [];
   public id: any = 0;
-
+  
   constructor(private route: ActivatedRoute) {
     this.route.params.forEach(item => this.id = item.id);
   }

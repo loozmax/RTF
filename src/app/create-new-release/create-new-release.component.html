@@ -1,34 +1,35 @@
-<form [formGroup]="myForm">
+<form class="main" (ngSubmit)="sumbit()">
+    <span (click)="closeModalView()" class="close">закрыть</span>
+    <div class='container'>
+        <label>Название выпуска</label>
+        <input name="nameNewspaper" [(ngModel)]="nameNewspaper">
+        <div *ngFor="let item of dataArray; let i = index">
+            <div class="articles">
+                <div>
+                    <label>Автор</label>
+                    <input name="author{{i}}" [(ngModel)]="item.author">
+                </div>
 
-    <p class="close" (click)="closeModalView()">X</p>
+                <div>
+                    <label>Название статьи</label>
+                    <input name="title{{i}}" [(ngModel)]="item.title">
+                </div>
 
-    <div class="articles" *ngFor="let item of articleNumbers; let i = index">
-        <div>
-            <label>Автор: </label>
-            <input type="text" formControlName="author">
-        </div>
-        <div>
-            <label>Название: </label>
-            <input type="text" formControlName="nameArticle">
-        </div>
-        <div class="articles__item" *ngFor="pages of item.countPages">
-            <div>
-                <label>Макет: </label>
-                <input type="text" formControlName="maket">
-            </div>
-            <div>
-                <label>Текст: </label>
-                <input type="text" formControlName="textPage">
-            </div>
-            <div>
-                <label>Картинка: </label>
-                <label class="choose-picture" for="upload">выберите картинку</label>
-                <input class="hide" id="upload" type='file'>
-            </div>
-        </div>
+                <div class="articles__item" *ngFor="let itm of item.pages; let m = index">
+                    <div>
+                        <label>Макет</label>
+                        <input name="maket{{m}}" [(ngModel)]="itm.maket">
+                    </div>
 
-        <div class="more-articles" (click)="increasePages(i)">Нужно больше страниц</div>
+                    <div>
+                        <label>Текст</label>
+                        <input name="text{{m}}" [(ngModel)]="itm.text">
+                    </div>
+                    <span (click)="addPage(i)">Добавить страницу</span>
+                </div>
+            </div>
+        </div>
+        <span (click)="addForm()">[+]</span>
+        <button>Отправить</button>
     </div>
-    <div class="more-pages" (click)="increaseArticles()">Больше статей</div>
-    <button class="create" [disabled]="myForm.invalid" (click)="sumbit(myForm)">Создать</button>
 </form>

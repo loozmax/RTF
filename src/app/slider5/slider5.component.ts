@@ -24,10 +24,12 @@ export class Slider5Component implements OnInit {
   public image: any[] = [];
 
   public byteImage: any[] = [];
+  public tooMuchLengthSize: boolean = false;
 
   constructor(private domSanitizer: DomSanitizer) { }
 
   public ngOnInit(): void {
+    this.tooMuchLengthSize = this.title.split(' ').length >= 4;
     // this.fetchtest();
   }
 

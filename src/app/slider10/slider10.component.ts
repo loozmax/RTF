@@ -21,13 +21,14 @@ export class Slider10Component implements OnInit {
   
   @Input()
   public image: any;
+  public tooMuchLengthSize: boolean = false;
 
   public byteImage: any;
 
   constructor(private domSanitizer: DomSanitizer) { }
   
   public ngOnInit(): void {
-    // this.fetchtest();
+    this.tooMuchLengthSize = this.title.split(' ').length >= 5;
   }
 
   // public fetchtest(): void {

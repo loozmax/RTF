@@ -5,6 +5,7 @@
     height:100vh;
     font-family: 'Montserrat', sans-serif;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 

@@ -1,54 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 .component {
     font-family: 'Montserrat', sans-serif;
-    border-radius:0 0 10px 10px;
-    height:100vh;
-    background-size:cover;
+    border-radius: 0 0 10px 10px;
+    height: 100vh;
+    background-size: cover;
     scroll-snap-align: start;
-    text-align:center;
+    text-align: center;
 }
 
 .navbar {
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 7fr;
 }
 
-.navbar div:last-child {
-    padding:0px 40px 0 40px;
-}
+
+/* .navbar div:last-child {
+    padding: 0px 40px 0 40px;
+} */
 
 .navbar div {
-    border:2px solid black;
-    height:100px;
+    border: 2px solid black;
+    height: 100px;
     position: relative;
 }
 
 .navbar div:last-child p {
     text-transform: uppercase;
-    font-size:34px;
-    text-align:center;
+    font-size: 34px;
+    text-align: center;
 }
 
 .navbar div:first-child img {
-    position:absolute;
-    left:45px;
-    top:34px;
+    position: absolute;
+    left: 45px;
+    top: 34px;
 }
 
 .navbar div:nth-child(2) img {
-    padding-top:15px;
+    padding-top: 15px;
 }
 
 .navbar div:nth-child(3) img {
-    padding-top:35px;
+    padding-top: 35px;
 }
+
 
 /* =============== */
 
 .content__container {
     position: relative;
-    display:flex;
+    display: flex;
     justify-content: space-around;
     width: 100%;
     height: 100%;
@@ -62,11 +63,11 @@
     border: 1px solid #fff;
 }
 
-.card__front, 
+.card__front,
 .card__back {
-    margin-top:40px;
-    border-radius:10px;
-    border:3px solid #000;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 3px solid #000;
     position: absolute;
     width: 350px;
     height: 450px;
@@ -88,7 +89,7 @@
 .card__back img {
     width: 350px;
     height: 450px;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
 .card:hover .card__front {
@@ -96,16 +97,44 @@
 }
 
 .card:hover .card__back {
-      transform: rotateY(360deg);
+    transform: rotateY(360deg);
 }
 
 .card__block::before {
-    content:'';
-    position:absolute;
-    width:30px;
-    height:30px;
-    background:url('../../assets/img/arrowToRotateCard.svg') no-repeat;
-    bottom:10px;
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url('../../assets/img/arrowToRotateCard.svg') no-repeat;
+    bottom: 10px;
     right: 10px;
 }
 
+@media screen and (max-width:376px) {
+    .navbar div:first-child,
+    .navbar div:nth-child(2) {
+        display: none;
+    }
+    .navbar div:nth-child(3) {
+        box-sizing: border-box;
+    }
+    .navbar div:nth-child(3) {
+        width: 80px;
+    }
+    .navbar div:nth-child(4) {
+        width: 295px;
+        box-sizing: border-box;
+    }
+    .navbar div:nth-child(4) p {
+        text-align: center;
+        font-size: 25px;
+        word-wrap: break-word;
+    }
+    .content {
+        display: none;
+    }
+    .title-much-length {
+        margin-top: 2px;
+        font-size: 23px;
+    }
+}

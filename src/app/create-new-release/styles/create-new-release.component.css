@@ -1,38 +1,38 @@
-form {
-    position:absolute;
-    border:1px solid #000;
-    width:800px;
-    min-height:400px;
-    top:50px;
-    left:350px;
+.main {
+    position: absolute;
+    border: 1px solid #000;
+    width: 800px;
+    min-height: 400px;
+    top: 50px;
+    left: 350px;
     background-color: #fff;
     border-radius: 10px;
-    padding:20px;
+    padding: 20px;
 }
 
 .articles {
-    border:2px solid red;
-    padding:10px;
+    border: 2px solid red;
+    padding: 10px;
     border-top: 0;
 }
 
 .articles__item {
-    border:3px solid rebeccapurple;
-    padding:10px;
-    border-left:0;
-    border-right:0;
-    margin-bottom:10px;
+    border: 3px solid rebeccapurple;
+    padding: 10px;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 10px;
 }
 
 .more-articles {
-    margin:15px 0 15px 0;
-    width:250px;
+    margin: 15px 0 15px 0;
+    width: 250px;
     border-radius: 10px;
     text-align: center;
-    font-size:17px;
-    padding-top:4px;
+    font-size: 17px;
+    padding-top: 4px;
     box-sizing: border-box;
-    height:30px;
+    height: 30px;
     background-color: red;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -40,15 +40,15 @@ form {
 }
 
 .more-pages {
-    margin-top:30px;
-    margin-bottom:30px;
-    width:170px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 170px;
     border-radius: 10px;
     text-align: center;
-    font-size:17px;
-    padding-top:4px;
+    font-size: 17px;
+    padding-top: 4px;
     box-sizing: border-box;
-    height:30px;
+    height: 30px;
     background-color: red;
     color: #fff;
     cursor: pointer;
@@ -57,49 +57,49 @@ form {
 
 form p {
     font-family: 'Montserrat', sans-serif;
-    position:absolute;
-    top:0;
-    right:30px;
+    position: absolute;
+    top: 0;
+    right: 30px;
 }
 
 .create {
-    width:100px;
-    height:30px;
-    margin-bottom:0;
-    margin:auto;
-    display:block;
-    width:170px;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 0;
+    margin: auto;
+    display: block;
+    width: 170px;
     border-radius: 10px;
     text-align: center;
-    font-size:17px;
+    font-size: 17px;
     box-sizing: border-box;
-    height:30px;
+    height: 30px;
     background-color: red;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    border:0;
+    border: 0;
     outline: none;
     cursor: pointer;
 }
 
 label {
-    font-size:18px;
+    font-size: 18px;
     font-family: 'Montserrat', sans-serif;
 }
 
 input[type="text"] {
     font-family: 'Montserrat', sans-serif;
-    border:1px solid #000;
-    outline:none;
+    border: 1px solid #000;
+    outline: none;
     border-radius: 10px;
-    height:22px;
-    padding-left:5px;
-    width:200px;
-    margin-bottom:10px;
+    height: 22px;
+    padding-left: 5px;
+    width: 200px;
+    margin-bottom: 10px;
 }
 
 input[type="file"] {
-    outline:none;
+    outline: none;
 }
 
 .hide {
@@ -112,13 +112,16 @@ input[type="file"] {
 }
 
 .choose-picture {
-    text-align:center;
-    padding:5px 10px 5px 10px;
-    height:25px;
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+    height: 25px;
     background: chartreuse;
     cursor: pointer;
 }
 
 .close {
     cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }

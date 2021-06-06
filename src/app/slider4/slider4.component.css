@@ -1,88 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-
 .component {
     font-family: 'Montserrat', sans-serif;
-    border-radius:0 0 10px 10px;
-    height:100vh;
-    background-size:cover;
+    border-radius: 0 0 10px 10px;
+    height: 100vh;
+    background-size: cover;
     scroll-snap-align: start;
-    text-align:center;
+    text-align: center;
 }
 
 .navbar {
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 7fr;
 }
 
-.navbar div:last-child {
-    padding:0px 40px 0 40px;
-}
+
+/* .navbar div:last-child {
+    padding: 0px 40px 0 40px;
+} */
 
 .navbar div {
-    border:2px solid black;
-    height:100px;
+    border: 2px solid black;
+    height: 100px;
     position: relative;
 }
 
 .navbar div:last-child p {
     text-transform: uppercase;
-    font-size:34px;
-    text-align:center;
+    font-size: 34px;
+    text-align: center;
 }
 
 .navbar div:first-child img {
-    position:absolute;
-    left:45px;
-    top:34px;
+    position: absolute;
+    left: 45px;
+    top: 34px;
 }
 
 .navbar div:nth-child(2) img {
-    padding-top:15px;
+    padding-top: 15px;
 }
 
 .navbar div:nth-child(3) img {
-    padding-top:35px;
+    padding-top: 35px;
 }
+
 
 /*================*/
 
 .content {
-    display:grid;
+    display: grid;
     grid-template-columns: 7fr auto;
     background-color: #0C68B0;
     color: #fff;
 }
 
+
 /* ------------------- */
 
 .container {
     position: relative;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 105px);
+    height: calc(100vh - 100px);
 }
 
 .container p {
-    width:712px;
-    font-size:28px;
+    width: 712px;
+    font-size: 28px;
 }
 
-.img1, .img2 {
-    position:absolute;
-}
-
-.img1 {
-    top:0;
-    left:0;
-    width:340px;
-    height:210px;
-}
-
-.img2 {
-    bottom:0;
-    right:0;
-    width:340px;
-    height:210px;
+@media screen and (max-width:376px) {
+    .navbar div:first-child,
+    .navbar div:nth-child(2) {
+        display: none;
+    }
+    .navbar div:nth-child(3) {
+        box-sizing: border-box;
+    }
+    .navbar div:nth-child(3) {
+        width: 80px;
+    }
+    .navbar div:nth-child(4) {
+        width: 295px;
+        box-sizing: border-box;
+    }
+    .navbar div:nth-child(4) p {
+        text-align: center;
+        font-size: 25px;
+        word-break: break-all;
+    }
+    .container p {
+        font-size: 23px;
+        text-align: center;
+        width: 320px;
+    }
+    .title-much-length {
+        margin-top: 2px;
+        font-size: 23px;
+    }
 }

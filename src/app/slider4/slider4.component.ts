@@ -18,11 +18,12 @@ export class Slider4Component implements OnInit {
   public image: any;
 
   public byteImage: any;
-  
+  public tooMuchLengthSize: boolean = false;
+
   constructor(private domSanitizer: DomSanitizer) { }
   
   public ngOnInit(): void {
-    // this.fetchtest();
+    this.tooMuchLengthSize = this.title.split(' ').length >= 4;
   }
 
   // public fetchtest(): void {

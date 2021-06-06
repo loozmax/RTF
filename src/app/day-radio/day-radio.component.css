@@ -4,12 +4,20 @@
     font-family: 'Montserrat', sans-serif;
     background:#0C68B0;
     border-radius:0 0 10px 10px;
-    height:100vh;
-    background-size:cover;
+    min-height:100vh;
     scroll-snap-align: start;
     text-align:center;
     color:#fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: url('../../assets/img/background.svg');
+    background-repeat:   no-repeat;
+    background-position: 50%;
+    background-size: 200%;
 }
+
 
 .component img {
     padding-top:72px;
@@ -35,7 +43,7 @@
 } 
 
 .footer-p {
-    margin:130px auto;
+    margin-top:auto;
 } 
 
 .footer-p p {
@@ -47,13 +55,41 @@
 }
 
 .footer-p p:first-child {
+    margin-left:60px;
     float:left;
-    margin-left:100px;
 }
 
 .footer-p p:last-child {
-    margin-right:210px;
+    margin-right:150px;
 }
 
+@media screen and (max-width: 376px) {
+    .component .dayradio p:first-child {
+        font-size:55px;
+    }
+    
+    .component .dayradio p:last-child {
+        font-size:80px;
+        margin-top:-80px;
+        font-weight:bold;
+    }
+
+    .component {
+        background-size: 280%;
+    }
+
+    .footer-p {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer-p p:first-child {
+        margin-left:0;
+    }
+    
+    .footer-p p:last-child {
+        margin-right:0;
+    }
+}
 
 

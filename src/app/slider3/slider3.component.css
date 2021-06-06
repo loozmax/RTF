@@ -1,53 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-
 .component {
     font-family: 'Montserrat', sans-serif;
-    border-radius:0 0 10px 10px;
-    height:100vh;
-    background-size:cover;
+    border-radius: 0 0 10px 10px;
+    height: 100vh;
+    background-size: cover;
     scroll-snap-align: start;
-    text-align:center;
+    text-align: center;
 }
 
 .navbar {
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 7fr;
 }
 
-.navbar div:last-child {
-    padding:0px 40px 0 40px;
-}
+
+/* .navbar div:last-child {
+    padding: 0px 40px 0 40px;
+} */
 
 .navbar div {
-    border:2px solid black;
-    height:100px;
+    border: 2px solid black;
+    height: 100px;
     position: relative;
 }
 
 .navbar div:last-child p {
     text-transform: uppercase;
-    font-size:34px;
-    text-align:center;
+    font-size: 34px;
+    text-align: center;
 }
 
 .navbar div:first-child img {
-    position:absolute;
-    left:45px;
-    top:34px;
+    position: absolute;
+    left: 45px;
+    top: 34px;
 }
 
 .navbar div:nth-child(2) img {
-    padding-top:15px;
+    padding-top: 15px;
 }
 
 .navbar div:nth-child(3) img {
-    padding-top:35px;
+    padding-top: 35px;
 }
 
 .container {
-    display:grid;
+    display: grid;
     grid-template-columns: 1.3fr 1fr;
 }
+
 
 /* 
 .container {
@@ -57,41 +58,85 @@
 } */
 
 .oglav {
-    margin-top:120px;
+    margin-top: 120px;
 }
 
 .oglav img {
-    max-height:400px;
+    max-height: 400px;
 }
 
 .dayradio {
-    position:relative;
-}
-
-h1 {
-    font-weight:bold;
-    font-size:53px;
-    text-align:left;
-    padding-left:63px;
-    padding-right:37px;
+    position: relative;
 }
 
 .dayradio p {
-    padding-left:63px;
-    font-size:20px;
-    padding-right:37px;
-    text-align:left;
-    margin-top:20px;
-    margin-bottom:125px;
+    padding-left: 63px;
+    font-size: 20px;
+    padding-right: 37px;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 125px;
 }
-/* 
-.author {
-    position:relative;
-    width:241px;
-    height:123px;
-    border:5px solid #000;
-    right:0;
-    bottom:0;
-    font-size:20px;
-} */
 
+h1 {
+    font-weight: bold;
+    font-size: 53px;
+    /* text-align: left; */
+    /* padding-left: 63px; */
+    /* padding-right: 37px; */
+}
+
+.oglav-mobile {
+    display: none;
+}
+
+@media screen and (max-width:376px) {
+    .navbar div:first-child,
+    .navbar div:nth-child(2) {
+        display: none;
+    }
+    .navbar div:nth-child(3) {
+        box-sizing: border-box;
+    }
+    .navbar div:nth-child(3) {
+        width: 80px;
+    }
+    .navbar div:nth-child(4) {
+        width: 295px;
+        box-sizing: border-box;
+    }
+    .navbar div:nth-child(4) p {
+        text-align: center;
+        font-size: 25px;
+        word-wrap: break-word;
+    }
+    h1 {
+        font-size: 33px;
+        font-weight: bold;
+        word-wrap: break-word;
+    }
+    .oglav-mobile {
+        margin-top: -100px;
+        display: block;
+    }
+    .oglav-mobile img {
+        max-height: 150px;
+    }
+    .oglav {
+        display: none;
+    }
+    .container {
+        display: block;
+    }
+    .dayradio .content__text {
+        padding: 5px;
+        text-align: center;
+    }
+    .title-much-length {
+        font-size: 30px;
+    }
+    .title-much-length2 {
+        font-size: 23px;
+        margin-top: 2px;
+    }
+}
