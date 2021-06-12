@@ -7,24 +7,19 @@
                     </app-day-radio>
                 </div>
                 <div *ngFor="let chapter of item.chapterList">
-                    <app-oglavlenie *ngIf="chapter.maket == 'CHAPTER_LIST'"></app-oglavlenie>
+                    <app-oglavlenie [nameString]="item.name" *ngIf="chapter.maket == 'CHAPTER_LIST'"></app-oglavlenie>
                 </div>
                 <div *ngFor="let article of item.articles">
                     <div *ngFor="let page of article.pages">
-                        <app-slider3 [nameString]="page.text" *ngIf="page.maket == 'ONE_PICTURE'"
-                            [image]="page.images[0]" [title]="article.name" [author]="article.author"></app-slider3>
-                        <app-slider4 [nameString]="page.text" *ngIf="page.maket == 'INTRODUCTION'"
-                            [image]="page.images[0]" [title]="article.name"></app-slider4>
-                        <app-slider5 [textFirst]="page.text[0]" [textSecond]="page.text[1]" [textThird]="page.text[2]"
-                            *ngIf="page.maket == 'COLUMNS_PAGE'" [image]="page.images" [title]="article.name">
+                        <app-slider3 [numberPage]="page.number" [nameString]="page.text" *ngIf="page.maket == 'ONE_PICTURE'" [image]="page.images[0]" [title]="article.name" [author]="article.author"></app-slider3>
+                        <app-slider4 [numberPage]="page.number" [nameString]="page.text" *ngIf="page.maket == 'INTRODUCTION'" [image]="page.images[0]" [title]="article.name"></app-slider4>
+                        <app-slider5 [numberPage]="page.number" [textFirst]="page.text[0]" [textSecond]="page.text[1]" [textThird]="page.text[2]" *ngIf="page.maket == 'COLUMNS_PAGE'" [image]="page.images" [title]="article.name">
                         </app-slider5>
-                        <app-slider7 [nameString]="page.text" *ngIf="page.maket == 'CARD_PAGE'" [image]="page.images[0]"
-                            [title]="article.name"></app-slider7>
+                        <app-slider7 [numberPage]="page.number" [nameString]="page.text" *ngIf="page.maket == 'CARD_PAGE'" [image]="page.images[0]" [title]="article.name"></app-slider7>
                         <!-- <app-slider8 [nameString]="page.text" ></app-slider8> -->
                         <!-- <app-slider9 [nameString]="page.text" ></app-slider9> -->
                         <!-- <app-slider6 [nameString]="page.text" ></app-slider6> -->
-                        <app-slider10 [textFirst]="page.text[0]" [textSecond]="page.text[1]" [textThird]="page.text[2]"
-                            [image]="page.images[0]" [title]="article.name" *ngIf="page.maket == 'MANY_TEXTS'">
+                        <app-slider10 [numberPage]="page.number" [textFirst]="page.text[0]" [textSecond]="page.text[1]" [textThird]="page.text[2]" [image]="page.images[0]" [title]="article.name" *ngIf="page.maket == 'MANY_TEXTS'">
                         </app-slider10>
                     </div>
                 </div>

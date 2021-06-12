@@ -8,6 +8,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class Slider10Component implements OnInit {
   @Input()
+  public numberPage: number = 0;
+
+  @Input()
   public title: string = "";
   
   @Input()
@@ -21,7 +24,10 @@ export class Slider10Component implements OnInit {
   
   @Input()
   public image: any;
+
   public tooMuchLengthSize: boolean = false;
+
+  public number: string = '';
 
   public byteImage: any;
 
@@ -29,6 +35,8 @@ export class Slider10Component implements OnInit {
   
   public ngOnInit(): void {
     this.tooMuchLengthSize = this.title.split(' ').length >= 5;
+    this.numberPage++;
+    this.number = 'num' + this.numberPage;
   }
 
   // public fetchtest(): void {

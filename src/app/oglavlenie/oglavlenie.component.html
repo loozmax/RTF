@@ -2,7 +2,7 @@
     <div class='navbar'>
         <div><img src='https://raw.githubusercontent.com/loozmax/RTF-NEWS/5cc984bbc4b4595fd9e12859d3710306c89f68fd/src/assets/img/burger.svg'>
         </div>
-        <div><img src='https://sun9-39.userapi.com/impf/u4Ue_qet2PGtWkpW-fhNTquOW8Iz28zou165Nw/XFoU1xYYDPM.jpg?size=81x77&quality=96&sign=1f07460f9ab90bd1d24dac353de966ed&type=album'>
+        <div><img src='../../assets/img/лого.png'>
         </div>
         <div><img src='https://raw.githubusercontent.com/loozmax/RTF-NEWS/5cc984bbc4b4595fd9e12859d3710306c89f68fd/src/assets/img/search.svg'>
         </div>
@@ -12,14 +12,15 @@
     </div>
     <div class='content'>
         <div class='dayradio'>
-            <p>день</p>
-            <p>пончиков</p>
+            <p>{{nameFirst}}</p>
+            <p>{{nameSecond}}</p>
         </div>
         <div class='oglav'>
             <div class="articles-number" *ngFor="let item of datas[0].articles">
-                <div>{{item.name}}</div>
-                <div>{{item.pages[0].number + 1}} — {{item.pages[item.pages.length - 1].number + 1}}</div>
+                <div (click)="onClick(item.pages[0].number + 1)">{{item.name}}</div>
+                <div (click)="onClick(item.pages[0].number + 1)">{{item.pages[0].number + 1}} — {{item.pages[item.pages.length - 1].number + 1}}</div>
             </div>
         </div>
     </div>
+    <img (click)="scrollToTop()" class='arrow-up' src='../../assets/img/arrow-up.svg'>
 </div>

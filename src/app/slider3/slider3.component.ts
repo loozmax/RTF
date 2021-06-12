@@ -9,6 +9,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class Slider3Component implements OnInit {
 
   @Input()
+  public numberPage: number = 0;
+
+  @Input()
   public title: string = "";
 
   @Input()
@@ -22,12 +25,17 @@ export class Slider3Component implements OnInit {
 
   public byteImage: any;
 
+  public number: string = '';
+
   public tooMuchLengthSize: boolean = false;
 
-  constructor(private domSanitizer: DomSanitizer) { }
+  constructor(private domSanitizer: DomSanitizer) { 
+  }
   
   public ngOnInit(): void {
     this.tooMuchLengthSize = this.title.split(' ').length >= 4;
+    this.numberPage++;
+    this.number = 'num' + this.numberPage;
   }
 
   // public fetchtest(): void {

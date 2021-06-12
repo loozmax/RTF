@@ -9,6 +9,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class Slider5Component implements OnInit {
 
   @Input()
+  public numberPage: number = 0;
+
+  @Input()
   public title: string = "";
 
   @Input()
@@ -23,15 +26,62 @@ export class Slider5Component implements OnInit {
   @Input()
   public image: any[] = [];
 
+  public number: string = '';
+
   public byteImage: any[] = [];
+
+  public slideIndex: number = 1;
+
   public tooMuchLengthSize: boolean = false;
 
   constructor(private domSanitizer: DomSanitizer) { }
 
   public ngOnInit(): void {
     this.tooMuchLengthSize = this.title.split(' ').length >= 4;
-    // this.fetchtest();
+    this.numberPage++;
+    this.number = 'num' + this.numberPage;
+    // this.showSlides(this.slideIndex);
   }
+
+  public plusSlide() {
+    this.showSlides(this.slideIndex += 1);
+  }
+
+  public minusSlide() {
+    this.showSlides(this.slideIndex -= 1);
+  }
+
+  public currentSlide(n: number, e?: any) {
+    this.showSlides(this.slideIndex = n, e);
+  }
+
+  public showSlides(n: number, e?: any) {
+    var i;
+    // let name = `uniq${this.number}`;
+
+    var slides = document.getElementsByClassName(e) as HTMLCollectionOf<HTMLElement>;
+    var dots = document.getElementsByClassName(`slider-dots_item_${this.number}`) as HTMLCollectionOf<HTMLElement>;
+    if (n > slides.length) {
+      this.slideIndex = 1
+    }
+    if (n < 1) {
+      this.slideIndex = slides.length;
+    }
+    if (n) {
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    }
+    if (n) {
+      for (i = 0; i < dots.length; i++) {
+        dots[i].style.background = "#ddd"
+      }
+    }
+    slides[this.slideIndex - 1].style.display = "block";
+    // // dots
+    dots[this.slideIndex - 1].style.background = "#000";
+  }
+
 
   // public fetchtest(): void {
   //   this.image.forEach((item, index) => {

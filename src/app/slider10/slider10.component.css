@@ -37,7 +37,9 @@
 }
 
 .navbar div:nth-child(2) img {
-    padding-top: 15px;
+    padding-top: 10px;
+    width: 83px;
+    height: 83px;
 }
 
 .navbar div:nth-child(3) img {
@@ -101,5 +103,22 @@
     .title-much-length {
         font-size: 23px;
         margin-top: 2px;
+    }
+    .content__table {
+        display: block;
+    }
+    .content__table div {
+        height: auto;
+    }
+    .content__table div p {
+        font-size: 17px;
+        text-align: center;
+    }
+    .content__table div:last-child {
+        border-bottom: 0;
+    }
+    .content__table div:last-child p {
+        padding: 0;
+        padding-bottom: 44px;
     }
 }

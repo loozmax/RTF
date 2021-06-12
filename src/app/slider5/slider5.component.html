@@ -1,7 +1,7 @@
-<div class='component'>
+<div class='component' id="{{number}}">
     <div class='navbar'>
         <div><img src='https://raw.githubusercontent.com/loozmax/RTF-NEWS/5cc984bbc4b4595fd9e12859d3710306c89f68fd/src/assets/img/burger.svg'></div>
-        <div><img src='https://sun9-39.userapi.com/impf/u4Ue_qet2PGtWkpW-fhNTquOW8Iz28zou165Nw/XFoU1xYYDPM.jpg?size=81x77&quality=96&sign=1f07460f9ab90bd1d24dac353de966ed&type=album'></div>
+        <div><img src='../../assets/img/лого.png'></div>
         <div><img src='https://raw.githubusercontent.com/loozmax/RTF-NEWS/5cc984bbc4b4595fd9e12859d3710306c89f68fd/src/assets/img/search.svg'></div>
         <div>
             <p [ngClass]='{"title-much-length": tooMuchLengthSize}'>{{title}}</p>
@@ -9,7 +9,42 @@
     </div>
     <div class='content'>
 
-        <div class='content__container'>
+        <div class="control_panel">
+            <span class="slider-dots_item_{{number}} active" (click)="currentSlide(1, 'uniq' + number)"></span>
+            <span class="slider-dots_item_{{number}}" (click)="currentSlide(2, 'uniq' + number)"></span>
+            <span class="slider-dots_item_{{number}}" (click)="currentSlide(3, 'uniq' + number)"></span>
+        </div>
+
+        <div class="content__container mobile">
+            <div class='card mob uniq{{number}} active'>
+                <div class='card__block card__front'>
+                    <p [innerHtml]="textFirst"></p>
+                </div>
+                <div class='card__block card__back'>
+                    <img [src]="byteimage1()" />
+                </div>
+            </div>
+            <div class='card mob uniq{{number}}'>
+                <div class='card__block card__front'>
+                    <p [innerHtml]="textSecond"></p>
+                </div>
+                <div class='card__block card__back'>
+                    <img [src]="byteimage2()" />
+                </div>
+            </div>
+            <div class='card mob uniq{{number}}'>
+                <div class='card__block card__front'>
+                    <p [innerHtml]="textThird"></p>
+                </div>
+                <div class='card__block card__back'>
+                    <img [src]="byteimage3()" />
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class='content__container web'>
             <div class='card'>
                 <div class='card__block card__front'>
                     <p [innerHtml]="textFirst"></p>

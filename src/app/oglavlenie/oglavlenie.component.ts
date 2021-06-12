@@ -1,14 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-// export interface IData {
-//   articles: Array<any>,
-//   chapterList: Array<any>,
-//   date: string,
-//   id: number,
-//   main: Array<any>,
-//   name: string
-// }
 
 @Component({
   selector: 'app-oglavlenie',
@@ -17,15 +9,41 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class OglavlenieComponent {
 
+  @Input()
+  public nameString: string = "";
+  
   public datas: any[] = [];
+  
   public id: any = 0;
+  
+  public nameFirst: string = '';
 
-  constructor(private route: ActivatedRoute) {
+  public nameSecond: string = '';
+
+  constructor(
+    private route: ActivatedRoute,
+    private viewportScroller: ViewportScroller
+  ) {
     this.route.params.forEach(item => this.id = item.id);
   }
 
   public ngOnInit(): void {
     this.fetchDataFromServer();
+    this.nameFirst = this.nameString.split(' ')[0];
+    this.nameSecond = this.nameString.split(' ')[2];
+  }
+
+  public scrollToTop(): void {
+    const top = document.querySelector('.top');
+    top?.scrollIntoView(false);
+  }
+
+  public onClick(id: number): void {
+    const num: string = '#num' + id;
+    let x = document.querySelector(num);
+    if (x) {
+      x.scrollIntoView(true);
+    }
   }
 
   public fetchDataFromServer(): void {

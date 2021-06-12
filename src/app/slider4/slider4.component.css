@@ -37,7 +37,9 @@
 }
 
 .navbar div:nth-child(2) img {
-    padding-top: 15px;
+    padding-top: 10px;
+    width: 83px;
+    height: 83px;
 }
 
 .navbar div:nth-child(3) img {
@@ -88,7 +90,7 @@
     .navbar div:nth-child(4) p {
         text-align: center;
         font-size: 25px;
-        word-break: break-all;
+        word-wrap: break-word;
     }
     .container p {
         font-size: 23px;
