@@ -118,6 +118,42 @@
     height: 350px;
 }
 
+@media screen and (max-width:415px) {
+    .navbar div:first-child,
+    .navbar div:nth-child(2) {
+        display: none;
+    }
+    .navbar div:nth-child(3) {
+        box-sizing: border-box;
+    }
+    .navbar div:nth-child(3) {
+        width: 100px;
+    }
+    .navbar div:nth-child(4) {
+        width: 314px;
+        box-sizing: border-box;
+    }
+    .navbar div:nth-child(4) p {
+        text-align: center;
+        font-size: 25px;
+        word-wrap: break-word;
+    }
+    .front,
+    .back {
+        width: 320px;
+        font-size: 20px;
+        height: auto;
+    }
+    .card {
+        left: 33px;
+        width: 320px;
+    }
+    .title-much-length {
+        font-size: 23px;
+        margin-top: 2px;
+    }
+}
+
 @media screen and (max-width:376px) {
     .navbar div:first-child,
     .navbar div:nth-child(2) {
@@ -147,6 +183,83 @@
     .card {
         left: 13px;
         width: 320px;
+    }
+    .title-much-length {
+        font-size: 23px;
+        margin-top: 2px;
+    }
+}
+
+@media screen and (max-width:376px) and (max-height: 670px) {
+    .navbar div:first-child,
+    .navbar div:nth-child(2) {
+        display: none;
+    }
+    .navbar div:nth-child(3) {
+        box-sizing: border-box;
+    }
+    .navbar div:nth-child(3) {
+        width: 80px;
+    }
+    .navbar div:nth-child(4) {
+        width: 295px;
+        box-sizing: border-box;
+    }
+    .navbar div:nth-child(4) p {
+        text-align: center;
+        font-size: 25px;
+        word-wrap: break-word;
+    }
+    .front,
+    .back {
+        width: 320px;
+        font-size: 18px;
+        height: auto;
+    }
+    .card {
+        left: 13px;
+        width: 320px;
+    }
+    .title-much-length {
+        font-size: 23px;
+        margin-top: 2px;
+    }
+}
+
+@media screen and (max-width:321px) {
+    .navbar div:first-child,
+    .navbar div:nth-child(2) {
+        display: none;
+    }
+    .navbar div:nth-child(3),
+    .navbar div:nth-child(4) {
+        box-sizing: border-box;
+    }
+    .navbar div:nth-child(3) {
+        width: 80px;
+    }
+    .navbar div:nth-child(4) {
+        width: 240px;
+    }
+    .navbar div:nth-child(4) p {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 20px;
+        margin-left: -2px;
+    }
+    .navbar div:nth-child(4) .title-much-length {
+        margin-top: 8px;
+    }
+    .front,
+    .back {
+        width: 260px;
+        font-size: 16px;
+        height: auto;
+    }
+    .card {
+        top: 15px;
+        left: 13px;
+        width: 260px;
     }
     .title-much-length {
         font-size: 23px;

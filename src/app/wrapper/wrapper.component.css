@@ -13,7 +13,7 @@ h3 {
     word-wrap: break-word;
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 800px) {
     .container {
         scroll-behavior: auto;
         scroll-snap-type: none;

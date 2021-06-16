@@ -62,12 +62,60 @@
     margin-right: 150px;
 }
 
+@media screen and (max-width: 415px) {
+    .component .dayradio p:first-child {
+        font-size: 55px;
+    }
+    .component .dayradio p:last-child {
+        font-size: 80px;
+        margin-top: -80px;
+        font-weight: bold;
+    }
+    .component {
+        background-size: 300%;
+    }
+    .footer-p {
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-p p:first-child {
+        margin-left: 0;
+    }
+    .footer-p p:last-child {
+        margin-right: 0;
+    }
+}
+
 @media screen and (max-width: 376px) {
     .component .dayradio p:first-child {
         font-size: 55px;
     }
     .component .dayradio p:last-child {
         font-size: 80px;
+        margin-top: -80px;
+        font-weight: bold;
+    }
+    .component {
+        background-size: 280%;
+    }
+    .footer-p {
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-p p:first-child {
+        margin-left: 0;
+    }
+    .footer-p p:last-child {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .component .dayradio p:first-child {
+        font-size: 55px;
+    }
+    .component .dayradio p:last-child {
+        font-size: 75px;
         margin-top: -80px;
         font-weight: bold;
     }
