@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 .admin {
-    display:flex;
+    display: flex;
     justify-content: space-around;
 }
 
 .admin__element {
-    width:350px;
+    width: 350px;
     height: 581px;
     margin-top: 50px;
 }
@@ -24,21 +22,47 @@
     background-color: #01B675;
 }
 
-.admin div svg {
-    padding-top:160px;
-    padding-left:65px;
-    height:400px;
-    width:350px;
+.admin div:first-child svg {
+    margin-left: 95px;
+    margin-top: 225px;
+    box-sizing: border-box;
+}
+
+.admin div:last-child svg {
+    margin-left: 50px;
+    margin-top: 210px;
+    box-sizing: border-box;
+}
+
+.admin div:nth-child(2) svg {
+    margin-top: 170px;
+    margin-left: 45px;
+    box-sizing: border-box;
 }
 
 .admin div p {
     color: #fff;
-    font-size:20px;
+    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
-    font-weight:bold;
-    padding-left:25px;
+    font-weight: bold;
+    padding-left: 25px;
 }
 
 .add-new {
     cursor: pointer;
+}
+
+@media screen and (max-width:376px) {
+    .admin {
+        flex-direction: column;
+        margin-left: 3px;
+    }
+    .admin>.admin__element svg {
+        display: none;
+    }
+    .admin>.admin__element {
+        height: 100px;
+        width: 340px;
+        margin-left: 15px;
+    }
 }

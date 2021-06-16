@@ -10,5 +10,6 @@ export class AdminGuard implements CanActivate{
 
         // return login === "admin" && password === "admin";
         return true;
+
     }
 }

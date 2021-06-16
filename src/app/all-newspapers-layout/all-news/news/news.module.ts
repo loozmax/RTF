@@ -7,7 +7,8 @@ import { AdminPanelComponent } from 'src/app/admin-panel/admin-panel.component';
 import { CreateNewReleaseComponent } from 'src/app/create-new-release/create-new-release.component';
 import { AllNewspapersLayoutComponent } from '../../all-newspapers-layout.component';
 import { NewsRoutingModule } from './news-routing.module';
-
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import {CdkVirtualScrollViewport} from "@angular/cdk/scrolling";
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { NewsRoutingModule } from './news-routing.module';
     RouterModule,
     NewsRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ScrollingModule
   ]
 })
 export class NewsModule { }

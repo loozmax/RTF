@@ -1,35 +1,37 @@
 <form class="main" (ngSubmit)="sumbit()">
-    <span (click)="closeModalView()" class="close">закрыть</span>
-    <div class='container'>
-        <label>Название выпуска</label>
-        <input name="nameNewspaper" [(ngModel)]="nameNewspaper">
-        <div *ngFor="let item of dataArray; let i = index">
-            <div class="articles">
-                <div>
-                    <label>Автор</label>
-                    <input name="author{{i}}" [(ngModel)]="item.author">
-                </div>
-
-                <div>
-                    <label>Название статьи</label>
-                    <input name="title{{i}}" [(ngModel)]="item.title">
-                </div>
-
-                <div class="articles__item" *ngFor="let itm of item.pages; let m = index">
+    <cdk-virtual-scroll-viewport itemSize="100">
+        <span (click)="closeModalView()" class="close">X</span>
+        <div class='container'>
+            <label>Название выпуска</label>
+            <input type="text" name="nameNewspaper" [(ngModel)]="nameNewspaper">
+            <div *ngFor="let item of dataArray; let i = index">
+                <div class="articles">
                     <div>
-                        <label>Макет</label>
-                        <input name="maket{{m}}" [(ngModel)]="itm.maket">
+                        <label>Автор</label>
+                        <input type="text" name="author{{i}}" [(ngModel)]="item.author">
                     </div>
 
                     <div>
-                        <label>Текст</label>
-                        <input name="text{{m}}" [(ngModel)]="itm.text">
+                        <label>Название статьи</label>
+                        <input type="text" class="nameArticle" name="title{{i}}" [(ngModel)]="item.title">
                     </div>
-                    <span (click)="addPage(i)">Добавить страницу</span>
+
+                    <div class="articles__item" *ngFor="let itm of item.pages; let m = index">
+                        <div>
+                            <label>Макет</label>
+                            <input type="text" name="maket{{m}}" [(ngModel)]="itm.maket">
+                        </div>
+
+                        <div>
+                            <label>Текст</label>
+                            <input type="text" name="text{{m}}" [(ngModel)]="itm.text">
+                        </div>
+                        <span class='more-pages' (click)="addPage(i)">Добавить страницу</span>
+                    </div>
                 </div>
             </div>
+            <span class='more-articles' (click)="addForm()">Добавить статью</span>
+            <button class='create'>Отправить</button>
         </div>
-        <span (click)="addForm()">[+]</span>
-        <button>Отправить</button>
-    </div>
+    </cdk-virtual-scroll-viewport>
 </form>
