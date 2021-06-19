@@ -34,6 +34,7 @@
     position: absolute;
     left: 45px;
     top: 34px;
+    cursor: pointer;
 }
 
 .navbar div:nth-child(2) img {
@@ -64,7 +65,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 104px);
 }
 
 .container p {

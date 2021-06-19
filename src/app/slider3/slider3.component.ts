@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-slider3',
@@ -29,7 +30,9 @@ export class Slider3Component implements OnInit {
 
   public tooMuchLengthSize: boolean = false;
 
-  constructor(private domSanitizer: DomSanitizer) { 
+  constructor(
+    private router: Router,
+    private domSanitizer: DomSanitizer) { 
   }
   
   public ngOnInit(): void {
@@ -38,24 +41,18 @@ export class Slider3Component implements OnInit {
     this.number = 'num' + this.numberPage;
   }
 
-  // public fetchtest(): void {
-  //   let url = `https://rtfnews.site/rtf/images?filename=${this.image}`;
-
-  //   fetch(url, { mode: 'cors' })
-  //     .then(res => res.text())
-  //     .then((data: any) => {
-  //       this.byteImage =  data;
-  //     })
-  //     .catch(err => { throw err });
-  // }
+  public toAllMagazines(): void {
+    this.router.navigate(['main'])
+  }
 
   public byteimage() {
     return `https://rtfnews.site/rtf/images/${this.image}`;
   }
 
-  // public get byteimage() {
-  //   return this.domSanitizer.bypassSecurityTrustUrl(`data:image/png;base64,${this.byteImage}`);
-  // }
-
-
+  public goToOglav(): void {
+    let x = document.querySelector(".oglav-search");
+    if (x) {
+      x.scrollIntoView(false);
+    }
+  }
 }

@@ -95,7 +95,6 @@ export class CreateNewReleaseComponent {
     for (let i = 0; i < this.dataArray.length; i++) {
       json.articles.push({name: this.dataArray[i].title, author: this.dataArray[i].author, pages: []})
       for (let k = 0; k < this.dataArray[i].pages.length; k++) {
-        console.log('+');
         let obj = {
           number: k + 2,
           maket: this.dataArray[i].pages[k].maket,
@@ -104,7 +103,6 @@ export class CreateNewReleaseComponent {
         json.articles[i].pages.push(obj)
       }
     }
-    console.log(json);
     let json2 = JSON.stringify(json)
 
     let xhr = new XMLHttpRequest();

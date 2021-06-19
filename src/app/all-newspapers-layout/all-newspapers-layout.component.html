@@ -1,7 +1,27 @@
 <div class='wrapper' *ngIf="datas.length">
-    <img src='https://sun9-39.userapi.com/impf/u4Ue_qet2PGtWkpW-fhNTquOW8Iz28zou165Nw/XFoU1xYYDPM.jpg?size=81x77&quality=96&sign=1f07460f9ab90bd1d24dac353de966ed&type=album'>
+    <!-- <img src='https://sun9-39.userapi.com/impf/u4Ue_qet2PGtWkpW-fhNTquOW8Iz28zou165Nw/XFoU1xYYDPM.jpg?size=81x77&quality=96&sign=1f07460f9ab90bd1d24dac353de966ed&type=album'> -->
     <div *ngFor="let item of datas">
         <a [routerLink]="['newspaper', item.id]">{{item.name}}</a>
         <p>{{item.date}}</p>
+    </div>
+    <div>
+        <a href='https://drive.google.com/file/d/1jDsmoIsJG6jnI13WWuJVSHc5JFVO4xfn/view'>Выпуск №160</a>
+        <p>2020-12-15</p>
+    </div>
+    <div>
+        <a href='https://drive.google.com/file/d/1jDsmoIsJG6jnI13WWuJVSHc5JFVO4xfn/view'>Выпуск №159</a>
+        <p>2020-10-19</p>
+    </div>
+    <div>
+        <a href='https://drive.google.com/file/d/1mJ98ABw87DRRmYS1bvehhVVlJGbVIzlP/view'>Выпуск №158</a>
+        <p>2020-08-22</p>
+    </div>
+    <div>
+        <a href="https://drive.google.com/file/d/1ENmPhl0T2-vU7BJL_33992AKfdPA7_7k/view">Выпуск №157</a>
+        <p>2020-05-13</p>
+    </div>
+    <div>
+        <a href='https://drive.google.com/file/d/1OqMHjzNznJZozA11rZR9KctUZs0GRhRE/view'>Выпуск №156</a>
+        <p>2020-03-05</p>
     </div>
 </div>

@@ -1,33 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 .wrapper {
-    display:flex;
-    height:100vh;
+    display: flex;
+    height: 100%;
     font-family: 'Montserrat', sans-serif;
     justify-content: space-around;
     flex-wrap: wrap;
+    background-image: url('../../assets/img/background.svg');
+    background-repeat: repeat-y;
+    background-position: 50%;
+    background-size: 200%;
+    z-index: 0;
 }
 
-
-.wrapper > div {
-    padding-top:70px;
-    box-sizing:border-box;
-    margin-top:200px;
-    width:400px;
-    height:200px;
+.wrapper>div {
+    padding-top: 70px;
+    box-sizing: border-box;
+    margin-top: 150px;
+    margin-bottom: 40px;
+    width: 400px;
+    height: 200px;
     text-align: center;
-    box-shadow:1px 1px 15px #000;
-    border-radius:8px;
+    box-shadow: 0 10px 6px -6px #777;
+    border-radius: 8px;
+    position: inherit;
+    z-index: 5;
+    background: #fff;
 }
 
-.wrapper > div a {
+.wrapper>div a {
     text-decoration: none;
-    color:#000;
-    font-size:45px;
+    color: #000;
+    font-size: 45px;
     text-transform: uppercase;
 }
 
 .wrapper img {
-    position:absolute;
+    position: absolute;
     top: 45px;
 }

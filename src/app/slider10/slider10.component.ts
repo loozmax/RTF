@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-slider10',
@@ -31,7 +32,9 @@ export class Slider10Component implements OnInit {
 
   public byteImage: any;
 
-  constructor(private domSanitizer: DomSanitizer) { }
+  constructor(
+    private router: Router,
+    private domSanitizer: DomSanitizer) { }
   
   public ngOnInit(): void {
     this.tooMuchLengthSize = this.title.split(' ').length >= 5;
@@ -56,5 +59,16 @@ export class Slider10Component implements OnInit {
 
   public byteimage(): string {
     return `https://rtfnews.site/rtf/images/${this.image}`;
+  }
+
+  public toAllMagazines(): void {
+    this.router.navigate(['main'])
+  }
+
+  public goToOglav(): void {
+    let x = document.querySelector(".oglav-search");
+    if (x) {
+      x.scrollIntoView(false);
+    }
   }
 }

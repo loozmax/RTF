@@ -1,10 +1,12 @@
-<div class='component'>
+<div class='component oglav-search'>
     <div class='navbar'>
-        <div><img src='https://raw.githubusercontent.com/loozmax/RTF-NEWS/5cc984bbc4b4595fd9e12859d3710306c89f68fd/src/assets/img/burger.svg'>
+        <div><img (click)="toAllMagazines()" src='assets/img/burger.svg'>
         </div>
-        <div><img src='assets/img/лого.png'>
+        <div>
+            <img src='assets/img/лого.png'>
         </div>
-        <div><img src='https://raw.githubusercontent.com/loozmax/RTF-NEWS/5cc984bbc4b4595fd9e12859d3710306c89f68fd/src/assets/img/search.svg'>
+        <div>
+            <img (click)="goToOglav()" class="search-icon" src='assets/img/search.svg'>
         </div>
         <div>
             <p>оглавление</p>

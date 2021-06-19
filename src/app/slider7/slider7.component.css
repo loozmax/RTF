@@ -34,6 +34,7 @@
     position: absolute;
     left: 45px;
     top: 34px;
+    cursor: pointer;
 }
 
 .navbar div:nth-child(2) img {
@@ -69,14 +70,14 @@
     cursor: pointer;
 }
 
-.content__container::before {
+.front::before {
     content: '';
     position: absolute;
     width: 30px;
     height: 30px;
     background: url('../../assets/img/arrowToRotateCard.svg') no-repeat;
     bottom: 10px;
-    right: 10px;
+    right: 22px;
     transform: rotate(180deg);
 }
 
@@ -93,7 +94,13 @@
     left: 90px;
     position: absolute;
     perspective: 1000px;
-    /* border: 1px solid red; */
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
 }
 
 .back {
@@ -102,14 +109,6 @@
     overflow: hidden;
     padding: 0;
     margin: 0;
-}
-
-.card:hover .front {
-    transform: rotateY(180deg);
-}
-
-.card:hover .back {
-    transform: rotateY(360deg);
 }
 
 .back img {

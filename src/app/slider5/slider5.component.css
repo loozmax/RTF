@@ -34,6 +34,7 @@
     position: absolute;
     left: 45px;
     top: 34px;
+    cursor: pointer;
 }
 
 .navbar div:nth-child(2) img {
@@ -63,6 +64,9 @@
     position: relative;
     perspective: 1000px;
     border: 1px solid #fff;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transition: transform 1s;
 }
 
 .card__front,
@@ -94,14 +98,6 @@
     border-radius: 10px;
 }
 
-.card:hover .card__front {
-    transform: rotateY(180deg);
-}
-
-.card:hover .card__back {
-    transform: rotateY(360deg);
-}
-
 .card__block::before {
     content: '';
     position: absolute;
@@ -118,6 +114,10 @@
 
 .content__container.mobile {
     display: none;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
 }
 
 @media screen and (max-width:415px) {

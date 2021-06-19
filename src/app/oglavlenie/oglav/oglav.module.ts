@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { OglavlenieComponent } from '../oglavlenie.component';
 
 
@@ -8,7 +9,8 @@ import { OglavlenieComponent } from '../oglavlenie.component';
   declarations: [OglavlenieComponent],
   exports: [OglavlenieComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ]
 })
 export class OglavModule { }

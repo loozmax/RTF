@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-slider5',
@@ -26,6 +27,10 @@ export class Slider5Component implements OnInit {
   @Input()
   public image: any[] = [];
 
+  public flip1: boolean = false;
+  public flip2: boolean = false;
+  public flip3: boolean = false;
+
   public number: string = '';
 
   public byteImage: any[] = [];
@@ -34,7 +39,9 @@ export class Slider5Component implements OnInit {
 
   public tooMuchLengthSize: boolean = false;
 
-  constructor(private domSanitizer: DomSanitizer) { }
+  constructor(
+    private router: Router,
+    private domSanitizer: DomSanitizer) { }
 
   public ngOnInit(): void {
     this.tooMuchLengthSize = this.title.split(' ').length >= 4;
@@ -83,18 +90,17 @@ export class Slider5Component implements OnInit {
   }
 
 
-  // public fetchtest(): void {
-  //   this.image.forEach((item, index) => {
-  //     let url = `https://rtfnews.site/rtf/images?filename=${this.image[index]}`;
+  public cardFlip1(): void {
+    this.flip1 = !this.flip1;
+  }
 
-  //     fetch(url, { mode: 'cors' })
-  //       .then(res => res.text())
-  //       .then((data: any) => {
-  //         this.byteImage[index] = data;
-  //       })
-  //       .catch(err => { throw err });
-  //   })
-  // }
+  public cardFlip2(): void {
+    this.flip2 = !this.flip2;
+  }
+  
+  public cardFlip3(): void {
+    this.flip3 = !this.flip3;
+  }
 
   public byteimage1() {
     return `https://rtfnews.site/rtf/images/${this.image[0]}`;
@@ -120,5 +126,15 @@ export class Slider5Component implements OnInit {
   //   return this.domSanitizer.bypassSecurityTrustUrl(`data:image/png;base64,${this.byteImage[2]}`);
   // }
 
+  public toAllMagazines(): void {
+    this.router.navigate(['main'])
+  }
+
+  public goToOglav(): void {
+    let x = document.querySelector(".oglav-search");
+    if (x) {
+      x.scrollIntoView(false);
+    }
+  }
 
 }

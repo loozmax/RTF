@@ -7,10 +7,12 @@
                     </app-day-radio>
                 </div>
                 <div *ngFor="let chapter of item.chapterList">
+
                     <app-oglavlenie [nameString]="item.name" *ngIf="chapter.maket == 'CHAPTER_LIST'"></app-oglavlenie>
                 </div>
                 <div *ngFor="let article of item.articles">
                     <div *ngFor="let page of article.pages">
+
                         <app-slider3 [numberPage]="page.number" [nameString]="page.text" *ngIf="page.maket == 'ONE_PICTURE'" [image]="page.images[0]" [title]="article.name" [author]="article.author"></app-slider3>
                         <app-slider4 [numberPage]="page.number" [nameString]="page.text" *ngIf="page.maket == 'INTRODUCTION'" [image]="page.images[0]" [title]="article.name"></app-slider4>
                         <app-slider5 [numberPage]="page.number" [textFirst]="page.text[0]" [textSecond]="page.text[1]" [textThird]="page.text[2]" *ngIf="page.maket == 'COLUMNS_PAGE'" [image]="page.images" [title]="article.name">
