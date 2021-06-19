@@ -97,6 +97,21 @@
     }
 }
 
+@media screen and (max-width:360px) {
+    .admin {
+        flex-direction: column;
+        margin-left: 3px;
+    }
+    .admin>.admin__element svg {
+        display: none;
+    }
+    .admin>.admin__element {
+        height: 100px;
+        width: 324px;
+        margin-left: 15px;
+    }
+}
+
 @media screen and (max-width:321px) {
     .admin {
         flex-direction: column;

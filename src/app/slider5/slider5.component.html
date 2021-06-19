@@ -16,7 +16,7 @@
         </div>
 
         <div class="content__container mobile">
-            <div class='card mob uniq{{number}} active'>
+            <div class='card mob uniq{{number}} active' (click)="cardFlip1()" [ngClass]="{'is-flipped': flip1}">
                 <div class='card__block card__front'>
                     <p [innerHtml]="textFirst"></p>
                 </div>
@@ -24,7 +24,7 @@
                     <img [src]="byteimage1()" />
                 </div>
             </div>
-            <div class='card mob uniq{{number}}'>
+            <div class='card mob uniq{{number}}' (click)="cardFlip2()" [ngClass]="{'is-flipped': flip2}">
                 <div class='card__block card__front'>
                     <p [innerHtml]="textSecond"></p>
                 </div>
@@ -32,7 +32,7 @@
                     <img [src]="byteimage2()" />
                 </div>
             </div>
-            <div class='card mob uniq{{number}}'>
+            <div class='card mob uniq{{number}}' (click)="cardFlip3()" [ngClass]="{'is-flipped': flip3}">
                 <div class='card__block card__front'>
                     <p [innerHtml]="textThird"></p>
                 </div>

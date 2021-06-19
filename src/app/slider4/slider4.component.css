@@ -102,6 +102,9 @@
         margin-top: 2px;
         font-size: 23px;
     }
+    .container {
+        height: calc(100vh - 100px);
+    }
 }
 
 @media screen and (max-width:376px) {
@@ -132,6 +135,9 @@
     .title-much-length {
         margin-top: 2px;
         font-size: 23px;
+    }
+    .container {
+        height: calc(100vh - 100px);
     }
 }
 
