@@ -10,15 +10,15 @@ const routes: Routes = [
     path: 'main',
     component: AllNewspapersLayoutComponent,
     children: [
-      { path: 'newspaper/:id', redirectTo: '/main/newspaper/:id' }
+      { path: 'newspaper/:id', redirectTo: '/main/newspaper/:id' },
     ]
   },
-  { path: 'admin', component: AdminPanelComponent, canActivate: [AdminGuard] },
-  { path: '', redirectTo: '/main', pathMatch: 'full' },
-  { path: '**', redirectTo: '/main', pathMatch: 'full' },
+  // { path: 'admin', component: AdminPanelComponent, canActivate: [AdminGuard] },
+  // { path: '', redirectTo: '/main', pathMatch: 'full' },
+  // { path: '**', redirectTo: '/main', pathMatch: 'full' },
 
   /** Заглушка. Тестовый выпуск */
-  { path: 'main/newspaper/100', component: TestComponentForShadrinComponent }
+  { path: 'test', component: TestComponentForShadrinComponent }
 ];
 
 @NgModule({
