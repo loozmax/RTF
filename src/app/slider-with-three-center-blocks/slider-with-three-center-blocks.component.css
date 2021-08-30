@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.component {
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 0 0 10px 10px;
+    height: 100vh;
+    background-size: cover;
+    scroll-snap-align: start;
+    text-align: center;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 7fr;
+}
+
+
+/* .navbar div:last-child {
+    padding: 0px 40px 0 40px;
+} */
+
+.navbar div {
+    border: 2px solid black;
+    height: 100px;
+    position: relative;
+}
+
+.navbar div:last-child p {
+    text-transform: uppercase;
+    font-size: 34px;
+    text-align: center;
+}
+
+.navbar div:first-child img {
+    position: absolute;
+    left: 45px;
+    top: 34px;
+    cursor: pointer;
+}
+
+.navbar div:nth-child(2) img {
+    padding-top: 10px;
+    width: 83px;
+    height: 83px;
+}
+
+.navbar div:nth-child(3) img {
+    padding-top: 35px;
+}
+
+
+/** ====== */
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:25px;
+}
+
+.slide {
+    border:2px solid black;
+    width:1300px;
+    margin:7px;
+}
+
+.place-for-image {
+    border:3px solid black;
+    width:250px;
+    height:167px;
+    margin-top:-1.5px;
+    border-right:4px solid black;   
+}
+
+.slide-container {
+    display:flex;
+    text-align: left;
+}
+
+
+
+.text {
+    padding:10px;
+}

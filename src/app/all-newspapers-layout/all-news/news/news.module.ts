@@ -1,3 +1,4 @@
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -7,8 +8,6 @@ import { AdminPanelComponent } from 'src/app/admin-panel/admin-panel.component';
 import { CreateNewReleaseComponent } from 'src/app/create-new-release/create-new-release.component';
 import { AllNewspapersLayoutComponent } from '../../all-newspapers-layout.component';
 import { NewsRoutingModule } from './news-routing.module';
-import {ScrollingModule} from '@angular/cdk/scrolling';
-import {CdkVirtualScrollViewport} from "@angular/cdk/scrolling";
 
 
 @NgModule({
@@ -20,7 +19,7 @@ import {CdkVirtualScrollViewport} from "@angular/cdk/scrolling";
   exports: [
     AllNewspapersLayoutComponent, 
     AdminPanelComponent,
-    CreateNewReleaseComponent
+    CreateNewReleaseComponent,
   ],
   providers: [AdminGuard],
   imports: [
