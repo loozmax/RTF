@@ -1,0 +1,11 @@
+<form class="main">
+    <cdk-virtual-scroll-viewport itemSize="100">
+        <span (click)="closeModalView()" class="close">X</span>
+        <div *ngFor="let item of magazine">
+            <div class="item">
+                Название газеты: "{{item.name}}", она добавлена на сайт {{item.date}}
+                <div class='delete' (click)="delete(item.id)">Удалить</div>
+            </div>
+        </div>
+    </cdk-virtual-scroll-viewport>
+</form>

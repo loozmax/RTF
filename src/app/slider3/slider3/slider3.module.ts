@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Slider3Component } from '../slider3.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -8,7 +10,9 @@ import { Slider3Component } from '../slider3.component';
   declarations: [Slider3Component],
   exports: [Slider3Component],
   imports: [
-    CommonModule
+    CommonModule,
+    BrowserModule,
+    HttpClientModule,
   ]
 })
 export class Slider3Module { }

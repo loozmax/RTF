@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AdminPanelComponent {
 
   public showModal: boolean = false;
+  public redoRelease: boolean = false;
 
   constructor() { }
 
@@ -20,6 +21,11 @@ export class AdminPanelComponent {
 
   public closeModal(): void {
     this.showModal = false;
+    this.redoRelease = false;
+  }
+
+  public startRedo(): void {
+    this.redoRelease = !this.redoRelease;
   }
 
 

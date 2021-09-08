@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-slider-with-one-block-center',
@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderWithOneBlockCenterComponent implements OnInit {
 
+  @Input()
+  public nameString: any;
+
+  @Input()
+  public image: any;
+
+  @Input()
+  public title: any;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public byteimage() {
+    return `https://rtfnews.site/rtf/images/${this.image}`;
   }
 
 }

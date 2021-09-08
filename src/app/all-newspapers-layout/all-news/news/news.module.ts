@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AdminGuard } from 'src/app/admin-guard/admin.guard';
 import { AdminPanelComponent } from 'src/app/admin-panel/admin-panel.component';
 import { CreateNewReleaseComponent } from 'src/app/create-new-release/create-new-release.component';
+import { RedoReleaseComponent } from 'src/app/redo-release/redo-release.component';
 import { AllNewspapersLayoutComponent } from '../../all-newspapers-layout.component';
 import { NewsRoutingModule } from './news-routing.module';
 
@@ -15,6 +16,8 @@ import { NewsRoutingModule } from './news-routing.module';
     AllNewspapersLayoutComponent,
     AdminPanelComponent,
     CreateNewReleaseComponent,
+    RedoReleaseComponent,
+
   ],
   exports: [
     AllNewspapersLayoutComponent, 

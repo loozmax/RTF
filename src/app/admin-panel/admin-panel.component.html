@@ -1,6 +1,6 @@
 <div class="admin">
-    <div class="admin__element">
-        <p class="add-new" (click)="changeActiveModal()">Добавить новый<br> выпуск</p>
+    <div class="admin__element" (click)="changeActiveModal()">
+        <p class="add-new">Добавить новый<br> выпуск</p>
         <svg xmlns="http://www.w3.org/2000/svg" width="300" height="325" viewBox="0 0 525 525 ">
             <g id="Эллипс_1 " data-name="Эллипс 1 " fill="none " stroke="#fff " stroke-width="10 ">
                 <circle cx="262.5 " cy="262.5 " r="262.5 " stroke="none " />
@@ -8,8 +8,8 @@
             </g>
         </svg>
     </div>
-    <create-new-release (closeModal)="closeModal() " *ngIf="showModal "></create-new-release>
-    <div class="admin__element ">
+    <create-new-release (closeModal)="closeModal()" *ngIf="showModal"></create-new-release>
+    <div class="admin__element" (click)="startRedo()">
         <p>Настройка текущих<br> выпусков</p>
         <svg xmlns="http://www.w3.org/2000/svg " width="300" height="325" viewBox="0 0 535.5 535.5 ">
             <g id="Icon_feather-settings " data-name="Icon feather-settings " transform="translate(3.5 3.5) ">
@@ -23,8 +23,8 @@
                     stroke-width="10 " />
             </g>
         </svg>
-
     </div>
+    <app-redo-release (closeModal)="closeModal()" *ngIf="redoRelease"></app-redo-release>
     <div class="admin__element ">
         <p>Редактировать<br> издателей</p>
         <svg xmlns="http://www.w3.org/2000/svg " width="300" height="325" viewBox="0 0 566.111 465 ">

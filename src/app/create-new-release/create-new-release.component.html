@@ -26,6 +26,11 @@
                             <label>Текст</label>
                             <input type="text" name="text{{m}}" [(ngModel)]="itm.text">
                         </div>
+
+                        <div>
+                            <label>Картинка</label>
+                            <input id='file' type="file" name="file{{m}}" (change)="test($event)">
+                        </div>
                         <span class='more-pages' (click)="addPage(i)">Добавить страницу</span>
                     </div>
                 </div>
